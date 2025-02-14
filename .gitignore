@@ -1,0 +1,40 @@
+# Project directories and files
+*/literature
+*/output/assets
+*/output/chapters
+*/output/*Arbeitsversion*.pdf
+*signature.pdf
+
+# Unused data sets
+*OECD_tertiary_education_rate.csv
+*OECD_employment_protection_legislation.csv
+*OECD_lm_regulations.xlsx
+*OECD_epl.xlsx
+
+# TeX output files
+*.aux
+*.bbl
+*.gz
+*.log
+*.out
+*.xml
+*.bcf
+*.blg
+*.fls
+*.fdb_latexmk
+*.ist
+*.glo
+*.glg
+*.gls
+*.acn
+*.synctex*
+*.synctex(busy)
+*.toc
+*.bcf*
+*.bbl*
+
+# R output files
+.Rproj.user
+.Rhistory
+.Ruserdata
+.Rhistory

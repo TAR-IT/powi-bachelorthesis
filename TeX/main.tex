@@ -1,0 +1,201 @@
+% TODO: Abgabedatum einfügen
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Dokument definieren %
+%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper, 12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Pakete laden und konfigurieren %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% deutsche Spracheinstellungen und -kodierung
+\usepackage[utf8]{inputenc}                                                 % Umlaute korrekt verwenden
+\usepackage[T1]{fontenc}                                                    % Schriftenkodierung
+\usepackage[ngerman]{babel}                                                 % Deutsche Spracheinstellungen
+\usepackage{csquotes}                                                       % Für korrekte Anführungszeichen
+\usepackage{hyphenat}                                                       % Silbentrennung
+
+% Pakete für R
+\usepackage{tabularray}                                                     % Für erweiterte Tabellen
+\usepackage{float}                                                          % Fixiert Objekte mit "H"
+\usepackage[normalem]{ulem}                                                 % Für Unter- und Durchstreichungen
+\UseTblrLibrary{booktabs}                                                   % Unterstützt Booktabs in Tabellen
+\UseTblrLibrary{siunitx}                                                    % Unterstützt Zahlen und Einheiten
+\newcommand{\tinytableTabularrayUnderline}[1]{\underline{#1}}               % Unterstreichung in Tabellen
+\newcommand{\tinytableTabularrayStrikeout}[1]{\sout{#1}}                    % Durchstreichung in Tabellen
+\NewTableCommand{\tinytableDefineColor}[3]{\definecolor{#1}{#2}{#3}}        % Farben in Tabellen
+\usepackage{adjustbox}                                                      % Skaliert Tabellen/Objekte
+\usepackage{multicol}                                                       % Mehrspaltiger Text
+\usepackage{listings}                                                       % Für Code-Listings
+\lstset{
+    language=R,                                                             % Specify the language
+    basicstyle=\ttfamily\scriptsize,                                        % Font style for code
+    numbers=left,                                                           % Line numbers on the left
+    numberstyle=\tiny,                                                      % Font size for line numbers
+    stepnumber=1,                                                           % Number every line
+    breaklines=true,                                                        % Automatically break long lines
+    frame=single,                                                           % Add a border around the code
+    captionpos=b,                                                           % Caption position (bottom)
+    showstringspaces=false                                                  % Do not show spaces in strings
+}
+
+% Layout und Seitenränder
+\usepackage{geometry}
+\geometry{a4paper, top=3cm, bottom=3cm, left=2.5cm, right=2.5cm}
+
+% Literaturverzeichnis mit APA-Zitierstil
+\usepackage[style=apa, backend=biber, language=ngerman]{biblatex}
+\addbibresource{assets/literature.bib}                                      % Bibliographiedatei einbinden
+
+% Pakete für Abkürzungsverzeichnis und Glossar
+\usepackage[printonlyused]{acronym}
+
+% mathematische Symbole (optional)
+\usepackage{amsmath, amssymb}
+
+% Für Tabellen und Grafiken
+\usepackage{graphicx}                                                       % Für Bilder
+\usepackage{booktabs}                                                       % Für schönere Tabellen
+
+% Hyperlinks
+\usepackage[hidelinks]{hyperref}
+
+% Codebook einbinden
+\usepackage{verbatim}                                                       % Für Einbinden als plain text
+
+% Zeilenabstand
+\usepackage{setspace}
+\onehalfspacing                                                             % 1,5-facher Zeilenabstand
+
+% Kopf- und Fußzeilen
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}                                                                  % Setzt Kopf- und Fußzeile zurück
+\fancyhead[R]{T. A. Rau}                                                    % Name links
+\fancyhead[L]{ICT-Investitionen und Arbeitslosigkeit in Wohlfahrtsstaaten}  % Titel rechts
+\setlength{\headheight}{14.5pt}                                             % Setzt die Höhe der Kopfzeile
+\fancyfoot[C]{\thepage}                                                     % Setzt die Seitenzahl mittig unten
+
+%%%%%%%%%%%%%%%%%%%%%
+% Dokument beginnen %
+%%%%%%%%%%%%%%%%%%%%%
+
+% Titel und Autoreninformationen
+\title{ICT-Investitionen und Arbeitslosigkeit in Wohlfahrtsstaaten\\ 
+\large Eine Paneldatenanalyse nach Bildungsniveau in OECD-Ländern}
+\author{Tobias Achim Rau}
+\date{\today}
+
+\begin{document}
+
+% Titelseite
+\maketitle
+\thispagestyle{empty}
+\vspace{2cm}
+
+\begin{center}
+  \textbf{Bachelorarbeit} \\
+  vorgelegt im Studiengang Politikwissenschaften \\
+  am Fachbereich 03 an der \textbf{Goethe-Universität Frankfurt} \\
+  \vspace{2cm}
+  \textbf{Verfasser:} Tobias Achim Rau \\
+  \textbf{Matrikelnummer:} 6619097 \\
+  \textbf{E-Mail:} s3045892@stud.uni-frankfurt.de \\
+  \vspace{2cm}
+  \textbf{Betreuerin:} Anna Gerlach \\
+  \vspace{2cm}
+  \textbf{Abgabedatum:} % TODO: Abgabedatum einfügen
+\end{center}
+
+\newpage
+
+% Inhaltsverzeichnis
+\tableofcontents
+
+\newpage
+
+% Abkürzungsverzeichnis
+\section*{Abkürzungsverzeichnis}
+\begin{acronym}[OECD]                                                       % Breite der längsten Abkürzung für Ausrichtung
+  \acro{ICT}{Informations- und Kommunikationstechnologien (aus d. Engl.: 
+  \textit{Information and Communication Technologies})}
+  
+  \acro{OECD}{Organisation für wirtschaftliche Zusammenarbeit und Entwicklung 
+  (aus d. Engl.: \textit{Organisation for Economic Co-operation and Development})}
+ 
+  \acro{SNA08}{System of National Accounts 2008}
+
+  \acro{SBTC}{Skill-Biased Technological Change (z. Dt.: \textit{Technologie mit 
+  qualifikationsspezifischen Effekten})}
+
+  \acro{RBTC}{Routine-Biased Technological Change (z. Dt.: \textit{Technologie mit 
+  routinespezifischen Effekten})}
+  
+  \acro{BIP}{Bruttoinlandsprodukt}
+  
+  \acro{RE}{Fixed Effects (z. Dt.: \textit{feste Effekte})}
+  
+  \acro{FE}{Random Effects (z. Dt.: \textit{zufällige Effekte})}
+
+  \acro{AI}{Künstliche Intelligenz (aus d. Engl.: \textit{Artificial Intelligence})}
+
+  \acro{IoT}{Internet der Dinge (aus d. Engl.: \textit{Internet of Things})}
+\end{acronym}
+
+\newpage
+
+% Glossar
+\section*{Glossar}
+\begin{description}
+  \item[Digitalisierung] bezeichnet den Prozess der Umwandlung von analogen Informationen, 
+  Prozessen und Geschäftsmodellen in digitale Formate. Sie umfasst den Einsatz digitaler 
+  Technologien zur Automatisierung und Optimierung von Abläufen sowie zur Schaffung neuer 
+  Wertschöpfungspotenziale \parencite[S. 6]{brennen2016theinternational}. Im 
+  wirtschaftlichen Kontext wird Digitalisierung oft im Zusammenhang mit der vierten 
+  industriellen Revolution (Industrie 4.0) gesehen, die durch die Integration digitaler 
+  und physischer Systeme gekennzeichnet ist \parencite[S. 114]{hofman2018arbeit}.
+
+  \item[Cloud Computing] beschreibt die Bereitstellung von IT-Ressourcen wie Speicherplatz, 
+  Rechenleistung und Anwendungen über das Internet („die Cloud“) anstelle lokaler Server 
+  oder Computer. Dieses Modell ermöglicht den flexiblen Zugriff auf Daten und Anwendungen 
+  unabhängig vom Standort und fördert Skalierbarkeit sowie Kosteneffizienz 
+  \parencite[S. 52]{armbrust2010aview}. Die wichtigsten Servicemodelle sind 
+  Infrastructure-as-a-Service, Platform-as-a-Service und 
+  Software-as-a-Service.
+
+  \item[Künstliche Intelligenz] bezeichnet die Fähigkeit von Maschinen oder 
+  Computersystemen, menschenähnliche kognitive Funktionen wie Lernen, Problemlösung und 
+  Entscheidungsfindung auszuführen. Sie basiert auf Algorithmen, die Muster in Daten 
+  erkennen und selbstständig aus Erfahrungen lernen können 
+  \parencite[S. 28]{russell2020artificial}. \ac{AI} umfasst verschiedene Teilbereiche wie 
+  maschinelles Lernen, neuronale Netzwerke und natürliche Sprachverarbeitung.
+
+  \item[Big Data] bezeichnet große, komplexe und schnell wachsende Datenmengen, die mit 
+  herkömmlichen Datenverarbeitungssystemen nur schwer analysierbar sind. Die Analyse 
+  von Big Data erfolgt häufig mit Verfahren des maschinellen Lernens, Data Mining und 
+  verteilten Datenbanksystemen \parencite[S. 92]{gandomi2014beyond}.
+\end{description}
+
+\newpage
+
+% Kapitel einbinden
+\include{chapters/einleitung}
+\include{chapters/forschungsgegenstand}
+\include{chapters/forschungsstand}
+\include{chapters/theorie_und_hypothesen}
+\include{chapters/daten_und_methodik}
+\include{chapters/ergebnisse}
+\include{chapters/diskussion_und_fazit}
+
+% Literaturverzeichnis
+\printbibliography
+
+\newpage
+
+% Anhang
+\appendix
+\include{chapters/anhang}
+
+\end{document}

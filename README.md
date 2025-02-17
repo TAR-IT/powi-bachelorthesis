@@ -5,7 +5,7 @@
 **Universität:** Goethe-Universität Frankfurt\
 **Fachbereich:** Fachbereich 03 – Geisteswissenschaften\
 **Studiengang:** Politikwissenschaften B.A. (Nebenfach Soziologie)\
-**Abgabedatum:** TODO\
+**Abgabedatum:** 25.03.2025\
 **Projektarchivierung:** [GitHub Repository](https://github.com/TAR-IT/bachelorthesis)
 
 ---

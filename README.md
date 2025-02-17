@@ -40,7 +40,7 @@ Diese Bachelorarbeit untersucht den Zusammenhang zwischen **Investitionen in Inf
 
 ## Anforderungen
 ### Genutzte Technologien
-- [R programing language](https://www.r-project.org/)
+- [R programming language](https://www.r-project.org/)
     - Für die Paneldatenanalyse wurde die Programmiersprache "R" genutzt.
     - **Erforderliche R-Pakete:** `ggplot2`, `plm`, `dplyr`, `modelsummary`, `knitr`, `kableExtra`
 - [RStudio](https://posit.co/download/rstudio-desktop/)

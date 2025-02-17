@@ -14,25 +14,23 @@
 # TeX output files
 *.fdb_latexmk
 *.synctex*
-*.aux
+*.bcf*
+*.bbl*
 *.bbl
-*.gz
+*.aux
 *.log
 *.out
 *.xml
 *.bcf
 *.blg
 *.fls
-
 *.ist
 *.glo
 *.glg
 *.gls
 *.acn
-
 *.toc
-*.bcf*
-*.bbl*
+*.gz
 
 # R output files
 .Rproj.user

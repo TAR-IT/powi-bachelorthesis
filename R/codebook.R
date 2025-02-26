@@ -47,7 +47,7 @@ describe_variables <- function(data, variables) {
 }
 
 # Funktion zur Beschreibung kategorialer Variablen
-describe_categorical_variable <- function(data, variable) {
+describe_welfarestate <- function(data, variable) {
   table_data <- table(data[[variable]])
   freq_table <- data.frame(
     Kategorie = names(table_data),
@@ -136,7 +136,7 @@ selected_countries <- c(
   "Luxembourg", "Netherlands", "New Zealand", "Norway",
   "Poland", "Portugal", "Romania", "Spain", "Sweden",
   "Switzerland", "Türkiye", "Slovak Republic", "Slovenia",
-  "United Kingdom","United States"
+  "United Kingdom", "United States"
 )
 
 # Liste aller Variablen für die Analyse
@@ -153,7 +153,7 @@ variables <- c(
 # OECD-Datensatz zu Arbeitslosenquoten
 data_unemp <- read.table(
   "data/OECD_unemployment_rates_by_education_level_annual_2000-2022.csv",
-  header = TRUE, sep = ",", dec = ".", fileEncoding = "UTF-8"
+  header = TRUE, sep = ";", dec = ",", fileEncoding = "UTF-8"
 ) %>%
   # Filtern nach ausgewählten Ländern und Zeiträumen
   filter(
@@ -191,8 +191,8 @@ data_unemp <- read.table(
 
 # OECD-Datensatz zu ICT-Investments
 data_ictinvest <- read.table(
-  "data/OECD_ICT_investment_share_of_gdp_2000-2022.csv",
-  header = TRUE, sep = ",", dec = ".", fileEncoding = "UTF-8"
+  "data/OECD_ict_investment_share_of_gdp_2000-2022.csv",
+  header = TRUE, sep = ";", dec = ",", fileEncoding = "UTF-8"
 ) %>%
   filter(
     Country %in% selected_countries,
@@ -210,7 +210,7 @@ data_ictinvest <- read.table(
 # OECD-Datensatz zu GDPs
 data_gdp <- read.table(
   "data/OECD_gdp_2000-2023.csv",
-  header = TRUE, sep = ",", dec = ".", fileEncoding = "UTF-8"
+  header = TRUE, sep = ";", dec = ",", fileEncoding = "UTF-8"
 ) %>%
   filter(
     Reference.area %in% selected_countries,
@@ -219,14 +219,14 @@ data_gdp <- read.table(
   mutate(
     REFERENCE_AREA = as.character(Reference.area),
     YEAR_OF_OBSERVATION = as.integer(TIME_PERIOD),
-    GDP_PER_CAPITA = OBS_VALUE / 1000 # BIP / 1000
+    GDP_PER_CAPITA = OBS_VALUE / 1000
   ) %>%
   select(REFERENCE_AREA, YEAR_OF_OBSERVATION, GDP_PER_CAPITA)
 
 # OECD-Datensatz zu Percentage of Tertiary Education
 data_pte <- read.table(
-  "data/OEDC_Adults-educational-attainment-distribution.csv",
-  header = TRUE, sep = ",", dec = ".", fileEncoding = "UTF-8"
+  "data/OEDC_adults-educational-attainment-distribution.csv",
+  header = TRUE, sep = ";", dec = ",", fileEncoding = "UTF-8"
 ) %>%
   filter(
     Reference.area %in% selected_countries,
@@ -241,8 +241,8 @@ data_pte <- read.table(
 
 # OECD-Datensatz zu Regulation Strictness
 data_reg <- read.table(
-  "data/OECD_Strictness-of-employment-protection.csv",
-  header = TRUE, sep = ",", dec = ".", fileEncoding = "UTF-8"
+  "data/OECD_strictness-of-employment-protection.csv",
+  header = TRUE, sep = ";", dec = ",", fileEncoding = "UTF-8"
 ) %>%
   filter(
     Reference.area %in% selected_countries,
@@ -258,7 +258,7 @@ data_reg <- read.table(
 # OECD-Datensatz zu Trade Union Density
 data_tud <- read.table(
   "data/OECD_trade_union_density.csv",
-  header = TRUE, sep = ",", dec = ".", fileEncoding = "UTF-8"
+  header = TRUE, sep = ";", dec = ",", fileEncoding = "UTF-8"
 ) %>%
   filter(
     Reference.area %in% selected_countries,
@@ -285,9 +285,18 @@ merged_data <- data_ictinvest %>%
   group_by(REFERENCE_AREA) %>%
   arrange(YEAR_OF_OBSERVATION) %>%  # Sortierung für Interpolation
   mutate(
-    PERCENT_EMPLOYEES_TUD = na.approx(as.numeric(PERCENT_EMPLOYEES_TUD), na.rm = FALSE, rule = 2),
-    PERCENT_TERTIARY_EDUCATION = na.approx(as.numeric(PERCENT_TERTIARY_EDUCATION), na.rm = FALSE, rule = 2),
-    REGULATION_STRICTNESS = na.approx(as.numeric(REGULATION_STRICTNESS), na.rm = FALSE, rule = 2)
+    PERCENT_EMPLOYEES_TUD =
+      na.approx(as.numeric(PERCENT_EMPLOYEES_TUD),
+                na.rm = FALSE,
+                rule = 2),
+    PERCENT_TERTIARY_EDUCATION =
+      na.approx(as.numeric(PERCENT_TERTIARY_EDUCATION),
+                na.rm = FALSE,
+                rule = 2),
+    REGULATION_STRICTNESS =
+      na.approx(as.numeric(REGULATION_STRICTNESS),
+                na.rm = FALSE,
+                rule = 2)
   ) %>%
   ungroup() %>%  # Entgruppierung wegen Interpolation
   mutate(
@@ -307,7 +316,7 @@ merged_data <- data_ictinvest %>%
 
 # Beschreibung der Variablen
 described_variables <- describe_variables(merged_data, variables)
-described_welfarestates <- describe_categorical_variable(merged_data, "WELFARE_STATE")
+described_welfarestates <- describe_welfarestate(merged_data, "WELFARE_STATE")
 
 # Ergebnisse anzeigen und speichern
 print(described_variables)
@@ -325,9 +334,9 @@ writeLines(
 print(described_welfarestates)
 writeLines(
   kable(described_welfarestates,
-        format = "latex",
-        booktabs = TRUE,
-        caption = "Übersicht über die Verteilung der Wohlfahrtsstaatentypen"
+    format = "latex",
+    booktabs = TRUE,
+    caption = "Übersicht über die Verteilung der Wohlfahrtsstaatentypen"
   ) %>%
     kable_styling(latex_options = c("hold_position")),
   "../TeX/assets/variables_welfare.tex"
@@ -489,4 +498,3 @@ msummary(interaction_models, stars = TRUE,
 msummary(interaction_models, stars = TRUE,
          coef_omit = "YEAR_FACTOR",
          output = "../TeX/assets/models_interaction.tex")
-

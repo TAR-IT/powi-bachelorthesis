@@ -1,27 +1,38 @@
 % TODO: Durchlesen! Zitation!
 
-\section{Daten und Methodik}
-
 %%%%%%%%%%%%%%
 % Datensätze %
 %%%%%%%%%%%%%%
 
+\section{Daten und Methodik}
+
 \subsection{Datensätze}
 
-Die vorliegenden Daten, die auf den umfangreichen \ac{OECD}-Datensätzen beruhen, stellen eine 
-solide Grundlage für die Untersuchung des Zusammenhangs zwischen Digitalisierung und 
-Arbeitsmarkt dar. Insbesondere werden die Datensätze zu \ac{ICT}-Investitionen 
-\parencite{oecd2022ict} sowie zu den Arbeitslosenquoten nach Bildungsniveau 
-\parencite{oecd2022unemployment} verwendet. Diese Datensätze ermöglichen es, die Auswirkungen 
-von Investitionen in \ac{ICT} auf die Arbeitslosigkeit in verschiedenen Bildungsgruppen auf 
-internationaler Ebene zu analysieren, während gleichzeitig die geopolitischen Unterschiede 
-berücksichtigt werden.
+Die vorliegenden Daten stammen aus den umfangreichen Datensätzen der \ac{OECD}, einer internationalen 
+Organisation, die vergleichbare Wirtschafts- und Sozialstatistiken für ihre Mitgliedsländer bereitstellt. 
+Die \ac{OECD} sammelt und veröffentlicht regelmäßig Daten zu wirtschaftlichen, sozialen und 
+technologischen Entwicklungen, die es ermöglichen, langfristige Trends und länderspezifische Unterschiede 
+zu analysieren \parencite{oecd2022ict}.
 
-Die Daten zu \ac{ICT}-Investitionen messen die Bruttoanlageinvestitionen in digitale 
-Infrastrukturen und Technologien \parencite{oecd2022ict}, während die Arbeitsmarktstatistiken 
-detaillierte Informationen über die Arbeitslosenquoten in verschiedenen Bildungsgruppen 
-bieten \parencite{oecd2022unemployment}. Diese Daten sind über mehrere Jahre hinweg verfügbar 
-und ermöglichen somit eine aussagekräftige Paneldatenanalyse.
+Für diese Untersuchung werden insbesondere die Datensätze zu \ac{ICT}-Investitionen \parencite{oecd2022ict} 
+sowie zu den Arbeitslosenquoten nach Bildungsniveau \parencite{oecd2022unemployment} verwendet. 
+Diese Datensätze bieten eine solide Grundlage, um die Auswirkungen von Investitionen in \ac{ICT} auf 
+die Arbeitslosigkeit in verschiedenen Bildungsgruppen auf internationaler Ebene zu analysieren, während 
+gleichzeitig institutionelle Unterschiede berücksichtigt werden.
+
+Die Daten umfassen insgesamt 35 OECD-Länder\footnote{Untersuchte Länder: Australien, Österreich, Belgien, 
+Bulgarien, Brasilien, Kanada, Kroatien, Tschechien, Dänemark, Estland, Finnland, Frankreich, Deutschland, 
+Griechenland, Ungarn, Island, Italien, Irland, Lettland, Litauen, Luxemburg, Niederlande, 
+Neuseeland, Norwegen, Polen, Portugal, Rumänien, Spanien, Schweden, Schweiz, Türkei, 
+Slowakei, Slowenien, Vereinigtes Königreich, USA.} und decken den Zeitraum von 2005 bis 
+2022 ab. Nach Bereinigung der Daten und Zusammenführung der relevanten Variablen verbleiben 1506 Beobachtungen 
+für die Paneldatenanalyse.
+
+Die Daten zu \ac{ICT}-Investitionen messen die Bruttoanlageinvestitionen in digitale Infrastrukturen und 
+Technologien \parencite{oecd2022ict}, während die Arbeitsmarktstatistiken detaillierte Informationen über 
+die Arbeitslosenquoten in verschiedenen Bildungsgruppen bieten \parencite{oecd2022unemployment}. Durch die 
+längsschnittliche Struktur der Daten wird es möglich, sowohl kurzfristige als auch langfristige 
+Entwicklungen zu erfassen.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 % Operationalisierung %
@@ -29,142 +40,86 @@ und ermöglichen somit eine aussagekräftige Paneldatenanalyse.
 
 \subsection{Operationalisierung}
 
-Um die Forschungsfrage - wie Investitionen in Informations- und Kommunikationstechnologien 
-die Arbeitslosenquoten in unterschiedlichen Bildungsgruppen beeinflussen - fundiert zu 
-beantworten, ist eine präzise und konsistente Operationalisierung der zentralen Konzepte und 
-Variablen notwendig. Dies gewährleistet, dass die Untersuchung die beabsichtigten 
-Zusammenhänge abbildet und die Daten sinnvoll ausgewertet werden können.
+Zur Beantwortung der Forschungsfrage - wie Investitionen in Informations- und Kommunikationstechnologien 
+die Arbeitslosenquoten in unterschiedlichen Bildungsgruppen beeinflussen - ist eine präzise und konsistente 
+Operationalisierung der zentralen Konzepte notwendig. Dies gewährleistet, dass die Untersuchung die 
+beabsichtigten Zusammenhänge abbildet und die Daten sinnvoll ausgewertet werden können.
 
-Die abhängige Variable dieser Untersuchung ist die \textit{Arbeitslosenquote} 
-(UNEMPLOYMENT\_RATE\_PERCENT), differenziert nach dem Bildungsniveau der Bevölkerung. Die 
-Arbeitslosenquote misst den Anteil der erwerbsfähigen Bevölkerung ohne Arbeit, wobei 
-spezifische Bildungsniveaus berücksichtigt werden. Der \ac{OECD}-Datensatz unterteilt das 
-Bildungsniveau in drei Hauptkategorien, die für diese Analyse relevant sind:
+Die abhängige Variable dieser Untersuchung ist die \textit{Arbeitslosenquote} (UNEMPLOYMENT\_RATE\_PERCENT), 
+die nach dem Bildungsniveau der Bevölkerung differenziert wird. Der \ac{OECD}-Datensatz unterteilt das 
+Bildungsniveau in drei Hauptkategorien:
 
 \begin{enumerate}
-    \item \textbf{Niedriges Bildungsniveau}: Personen ohne 
-    abgeschlossene Schulbildung oder mit einem maximalen Hauptschulabschluss.
-
-    \item \textbf{Mittleres Bildungsniveau}: Personen mit 
-    Sekundarschulabschluss oder einer abgeschlossenen Berufsausbildung.
-
-    \item \textbf{Hohes Bildungsniveau}: Personen mit Hochschulabschluss, wie 
-    einem Bachelor, Master oder Doktortitel.
+    \item \textbf{Niedriges Bildungsniveau}: Personen ohne abgeschlossene Schulbildung oder mit einem 
+    maximalen Hauptschulabschluss.
+    \item \textbf{Mittleres Bildungsniveau}: Personen mit Sekundarschulabschluss oder einer abgeschlossenen 
+    Berufsausbildung.
+    \item \textbf{Hohes Bildungsniveau}: Personen mit Hochschulabschluss, wie einem Bachelor, Master oder 
+    Doktortitel.
 \end{enumerate}
 
-Arbeitslose sind nach dem \ac{OECD}-Datensatz Personen im erwerbsfähigen Alter, die keine 
-Arbeit haben, die für eine Arbeit zur Verfügung stehen und die in den letzten vier Wochen 
-konkrete Schritte unternommen haben, um eine Arbeit zu finden 
-\parencite{oecd2022unemployment}. Diese Definition basiert auf internationalen Standards und 
-wird durch Arbeitskräfteerhebungen erfasst. Der Indikator wird als Prozentsatz der 
-Erwerbsbevölkerung gemessen und ist saisonbereinigt. Die Daten liegen länderspezifisch und 
-zeitlich differenziert als Paneldaten über mehrere Jahre vor.
+Arbeitslose sind nach der Definition der \ac{OECD} Personen im erwerbsfähigen Alter, die keine Arbeit haben, 
+für eine Arbeit zur Verfügung stehen und in den letzten vier Wochen konkrete Schritte unternommen haben, um 
+eine Arbeit zu finden \parencite{oecd2022unemployment}. Dieser Indikator wird als Prozentsatz der 
+Erwerbsbevölkerung gemessen und ist saisonbereinigt.
 
-Die unabhängige Variable \textit{\ac{ICT}-Investitionen} (ICT\_INVEST\_SHARE\_GDP) umfasst 
-Investitionen in digitale Infrastruktur, Software, Hardware und andere Technologien, die der 
-Verbesserung betrieblicher Effizienz und Produktivität dienen \parencite{oecd2022ict}. Im 
-\ac{OECD}-Datensatz werden \textit{\ac{ICT}-Investitionen} als Bruttoanlageinvestitionen in 
-Informations- und Kommunikationsausrüstung sowie Computersoftware und -datenbanken gemessen, 
-basierend auf den Definitionen des \ac{SNA08}. Für diese Arbeit werden 
-\textit{\ac{ICT}-Investitionen} als Anteil des \ac{BIP} operationalisiert, wobei der Wert als 
-Prozentwert angegeben wird. Die Daten liegen jährlich und länderspezifisch vor und sind somit 
-für Paneldatenanalysen geeignet.
+Die zentrale unabhängige Variable \textit{\ac{ICT}-Investitionen} (ICT\_INVEST\_SHARE\_GDP) misst Investitionen 
+in digitale Infrastruktur, Software, Hardware und Technologien, die zur Verbesserung betrieblicher Effizienz 
+und Produktivität beitragen \parencite{oecd2022ict}. Die Daten basieren auf den Definitionen des \ac{SNA08} 
+und werden als Anteil am \ac{BIP} in Prozent angegeben.
 
-Um sicherzustellen, dass der Effekt der \textit{\ac{ICT}-Investitionen} auf die 
-Arbeitslosenquote nicht durch andere Faktoren verzerrt wird, werden mehrere Kontrollvariablen 
-integriert:
+Um sicherzustellen, dass der Effekt der \ac{ICT}-Investitionen auf die Arbeitslosenquote nicht durch andere 
+Faktoren verzerrt wird, werden mehrere Kontrollvariablen in die Analyse aufgenommen:
 
 \begin{itemize}
-    \item \textbf{\textit{\ac{BIP} pro Kopf} (GDP\_PER\_CAPITA):} Diese Variable misst den 
-    wirtschaftlichen Wohlstand eines Landes in US-Dollar pro Jahr und kontrolliert den 
-    Entwicklungsstand eines Landes, da wirtschaftlich wohlhabendere Länder tendenziell 
-    niedrigere Arbeitslosenquoten aufweisen \parencite{oecd2022gdp}.
-
-    \item \textbf{\textit{Gewerkschaftsdichte} (PERCENT\_EMPLOYEES\_TUD):} Der Anteil der in 
-    Gewerkschaften organisierten Arbeitnehmer wird berücksichtigt, da Gewerkschaften eine 
-    wichtige Rolle bei der Aushandlung von Arbeitsbedingungen spielen 
-    \parencite{oecd2022tud}.
+    \item \textit{\ac{BIP} pro Kopf} (GDP\_PER\_CAPITA): Diese Variable misst den wirtschaftlichen Wohlstand 
+    eines Landes in tausend US-Dollar pro Jahr und kontrolliert den Entwicklungsstand eines Landes, da 
+    wirtschaftlich wohlhabendere Länder tendenziell niedrigere Arbeitslosenquoten aufweisen 
+    \parencite{oecd2022gdp}.
+    \item \textit{Gewerkschaftsdichte} (PERCENT\_EMPLOYEES\_TUD): Der Anteil der in Gewerkschaften 
+    organisierten Arbeitnehmer wird berücksichtigt, da Gewerkschaften eine wichtige Rolle bei der Aushandlung 
+    von Arbeitsbedingungen und Arbeitsplatzsicherheit spielen \parencite{oecd2022tud}. Frühere Studien 
+    zeigen, dass eine hohe Gewerkschaftsdichte oft mit niedrigeren Arbeitslosenquoten für geringqualifizierte 
+    Arbeitnehmer verbunden ist, da Gewerkschaften Mindestlöhne sichern und Beschäftigungsschutzmaßnahmen 
+    verstärken \parencite[S. 61]{nickell1997unemployment}.
+    \item \textit{Wohlfahrtsstaatentyp} (WELFARE\_STATE): Die Wohlfahrtsstaatentypologie nach Esping-Andersen 
+    (1990) \parencite{espingandersen1990thethree} wird in die Analyse integriert, um zu untersuchen, 
+    inwiefern institutionelle Unterschiede den Effekt von \ac{ICT}-Investitionen auf die Arbeitslosenquote 
+    beeinflussen. Die Länder werden in fünf Kategorien unterteilt: \textit{sozialdemokratisch}, 
+    \textit{konservativ}, \textit{liberal}, \textit{südeuropäisch} und \textit{postsozialistisch}.
 \end{itemize}
 
-Diese Variablen stammen aus der \ac{OECD}-Datenbank und werden jährlich erhoben. Die 
-Kombination dieser Daten ermöglicht es, länderspezifische Unterschiede in der 
-Wirtschaftskraft, den regulatorischen Rahmenbedingungen und der Bildungsstruktur zu 
-kontrollieren, um den direkten Einfluss der \textit{\ac{ICT}-Investitionen} präzise zu 
-analysieren.
-
-Die Analyse erfolgt über einen Zeitraum von 2005 bis 2022, wodurch langfristige Trends 
-berücksichtigt werden können. Die Paneldatenstruktur ermöglicht es, zeitliche und 
-länderspezifische Variationen einzubeziehen, was der Analyse zusätzliche Tiefe und 
-Aussagekraft verleiht.
-
-%%%%%%%%%%%%%%%%%%%%%%%
-% Analytische Methode %
-%%%%%%%%%%%%%%%%%%%%%%%
+Die Kombination dieser Daten ermöglicht es, länderspezifische Unterschiede in der Wirtschaftskraft, den 
+regulatorischen Rahmenbedingungen und der Bildungsstruktur zu kontrollieren, um den direkten Einfluss der 
+\ac{ICT}-Investitionen präzise zu analysieren.
 
 \subsection{Analytische Methode}
 
-Die Analyse dieser Arbeit basiert auf einer Paneldatenanalyse, um die Auswirkungen 
-von \textit{\ac{ICT}-Investitionen} auf die \textit{Arbeitslosenquote nach Bildungsniveau} 
-zu untersuchen. Der methodische Ansatz kombiniert die Analyse zeitlicher Veränderungen und 
-länderspezifischer Unterschiede und ermöglicht es, individuelle Heterogenität zwischen 
-Ländern sowie dynamische Entwicklungen über die Zeit zu erfassen \parencite{wooldridge2010econometric}.
+Die Analyse dieser Arbeit basiert auf einer Paneldatenanalyse, um die Auswirkungen von \ac{ICT}-Investitionen 
+auf die Arbeitslosenquote nach Bildungsniveau zu untersuchen. Die Wahl einer Paneldatenmethode ermöglicht 
+es, sowohl individuelle Heterogenität zwischen Ländern als auch dynamische Entwicklungen über die Zeit zu 
+erfassen \parencite{wooldridge2010econometric}.
 
-Zur Untersuchung der Effekte von \textit{\ac{ICT}-Investitionen} wurden zwei gängige 
-Modelle der Paneldatenanalyse betrachtet: \ac{FE} und \ac{RE}. Diese Modelle unterscheiden sich 
-in der Art und Weise, wie sie länderspezifische, zeitinvariante Effekte berücksichtigen:
+Zur Untersuchung der Effekte wurden zwei gängige Modelle der Paneldatenanalyse betrachtet: das \ac{FE}- 
+und das \ac{RE}-Modell. Während das \ac{FE}-Modell explizit für zeitinvariante länderspezifische 
+Eigenschaften kontrolliert \parencite[S. 251–256]{wooldridge2010econometric}, geht das \ac{RE}-Modell 
+davon aus, dass länderspezifische Effekte zufällig verteilt und nicht mit den unabhängigen Variablen 
+korreliert sind \parencite[S. 17–20]{baltagi2021econometric}. Falls diese Annahme verletzt ist, können 
+die Schätzungen im \ac{RE}-Modell verzerrt sein.
 
-\begin{itemize}
-    \item \textbf{\ac{FE}-Modell:}  
-    Kontrolliert für zeitinvariante länderspezifische Eigenschaften wie 
-    geografische Lage, institutionelle Rahmenbedingungen oder kulturelle Unterschiede, 
-    indem diese Effekte eliminiert werden. Es fokussiert sich ausschließlich auf die 
-    Variation innerhalb eines Landes über die Zeit und ermöglicht eine genauere 
-    Identifikation kausaler Effekte \parencite[S. 251–256]{wooldridge2010econometric}. 
-    Ein Nachteil besteht darin, dass konstant bleibende länderspezifische Variablen 
-    nicht geschätzt werden können.
-    
-    \item \textbf{\ac{RE}-Modell:}  
-    Geht davon aus, dass länderspezifische Effekte zufällig verteilt und nicht mit den 
-    unabhängigen Variablen korreliert sind. Es berücksichtigt sowohl die 
-    Variation innerhalb als auch zwischen den Ländern \parencite[S. 17–20]{baltagi2021econometric}. 
-    Falls die Annahme der Unkorreliertheit verletzt ist, können die Schätzungen verzerrt sein.
-\end{itemize}
+Für diese Analyse wurde das \ac{FE}-Modell gewählt, da es eine robustere Schätzung der kausalen Effekte 
+von ICT-Investitionen auf die Arbeitslosigkeit ermöglicht. Dies ist besonders relevant, da die 
+Untersuchung auf Veränderungen innerhalb eines Landes über die Zeit fokussiert und länderspezifische 
+Eigenschaften nicht als erklärende Variablen modelliert werden.
 
-Für diese Analyse wurde das \ac{FE}-Modell gewählt, da es eine robustere Schätzung 
-der kausalen Effekte von ICT-Investitionen auf die Arbeitslosigkeit ermöglicht. Dies ist 
-besonders relevant, da die Untersuchung auf Veränderungen innerhalb eines Landes über die Zeit 
-fokussiert und länderspezifische Eigenschaften nicht als erklärende Variablen modelliert werden.
+Darüber hinaus wird die Analyse durch Interaktionseffekte ergänzt, die es ermöglichen, institutionelle 
+Unterschiede zwischen den Ländern zu berücksichtigen. Die Modelle beinhalten Dummy-Variablen für die 
+Wohlfahrtsstaatentypen, um systematische Unterschiede zwischen den Regimetypen in ihrer Reaktion auf 
+\ac{ICT}-Investitionen zu identifizieren \parencite{espingandersen1990thethree}. Zusätzlich werden 
+Jahres-Faktor-Dummies integriert, um allgemeine makroökonomische Entwicklungen (z. B. Finanzkrisen 
+oder technologische Schübe) aus den Modellen zu kontrollieren.
 
-Zudem werden über die Dummy-Variable \textit{Jahresfaktor} (YEAR\_FACTOR) zeitliche 
-Faktoren wie Finanzkrisen und die Corona-Pandemie kontrolliert, um allgemeine makroökonomische 
-Einflüsse auf die Ergebnisse zu minimieren. Hierbei wird das Jahr 2005 als Referenzkategorie 
-gewählt. Neben den Haupteffekten der \textit{\ac{ICT}-Investitionen} und der Dummy-Variable 
-werden Interaktionseffekte mit den \textit{Wohlfahrtsstaatentypen} modelliert, um 
-institutionelle Rahmenbedingungen als moderierenden Faktor in der Beziehung zwischen 
-Digitalisierung und Arbeitslosigkeit zu berücksichtigen \parencite{espingandersen1990thethree}. 
-Die Wahl der Referenzkategorie „Anglo-Saxon“ erlaubt eine Interpretation der anderen 
-\textit{Wohlfahrtsstaatentypen} relativ zu dieser Gruppe. 
-
-Die Wahl der Referenzkategorie „Anglo-Saxon“ basiert auf mehreren Überlegungen:
-
-\begin{itemize}
-    \item \textbf{Repräsentativer Charakter:} Die angelsächsischen Länder (z. B. USA, 
-    Großbritannien) stehen für ein liberales Wohlfahrtsmodell mit 
-    marktorientierter Wirtschaftspolitik und vergleichsweise schwachen sozialen 
-    Sicherungssystemen \parencite[S. 15–50]{brynjolfsson2014thesecond}.
-
-    \item \textbf{Wissenschaftliche Relevanz:} Das anglo-sächsische Modell wird häufig als 
-    Benchmark verwendet, da es eine Vorreiterrolle bei der Digitalisierung einnimmt 
-    \parencite[Kap. 2]{brynjolfsson2014thesecond}.
-
-    \item \textbf{Statistische Stabilität:} Die Referenzkategorie weist eine ausreichende 
-    Fallzahl auf, um robuste Ergebnisse zu gewährleisten.
-\end{itemize}
-
-Die Kombination aus \ac{FE}-Modellen, Interaktionseffekten und 
-zeitlichen Dummies bietet eine solide Grundlage für die Untersuchung der 
-Auswirkungen von \textit{\ac{ICT}-Investitionen} auf die Arbeitslosigkeit. Die 
-Paneldatenanalyse ermöglicht es, sowohl zeitliche Veränderungen als auch 
-länderspezifische Unterschiede zu berücksichtigen, wodurch die komplexen Wechselwirkungen 
-zwischen Digitalisierung, institutionellen Rahmenbedingungen und Bildungsniveaus präzise 
-analysiert werden können \parencite[S. 12–15]{baltagi2021econometric}.
+Durch diese Kombination aus \ac{FE}-Modellen, Interaktionseffekten und Zeitdummies bietet die 
+Paneldatenanalyse eine solide Grundlage für die Untersuchung der Auswirkungen von \ac{ICT}-Investitionen 
+auf die Arbeitslosigkeit. Die longitudinale Struktur der Daten erlaubt eine differenzierte Betrachtung, 
+die sowohl kurzfristige als auch langfristige Beschäftigungseffekte berücksichtigt.

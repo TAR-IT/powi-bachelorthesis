@@ -46,6 +46,17 @@ describe_variables <- function(data, variables) {
   return(described_variables)
 }
 
+# Funktion zur Beschreibung kategorialer Variablen
+describe_categorical_variable <- function(data, variable) {
+  table_data <- table(data[[variable]])
+  freq_table <- data.frame(
+    Kategorie = names(table_data),
+    Anzahl = as.numeric(table_data),
+    Prozent = round(as.numeric(table_data) / sum(table_data) * 100, 2)
+  )
+  return(freq_table)
+}
+
 # Funktion für deskriptive Visualisierung pro Land
 plot_country_data <- function(data, country_name) {
   # Mapping für deutsche Ländernamen in den Plots
@@ -207,7 +218,7 @@ data_gdp <- read.table(
   mutate(
     REFERENCE_AREA = as.character(Reference.area),
     YEAR_OF_OBSERVATION = as.integer(TIME_PERIOD),
-    GDP_PER_CAPITA = OBS_VALUE
+    GDP_PER_CAPITA = OBS_VALUE / 1000 # BIP / 1000
   ) %>%
   select(REFERENCE_AREA, YEAR_OF_OBSERVATION, GDP_PER_CAPITA)
 
@@ -261,6 +272,7 @@ merged_data <- data_ictinvest %>%
 
 # Beschreibung der Variablen
 described_variables <- describe_variables(merged_data, variables)
+welfare_state_summary <- describe_categorical_variable(merged_data, "WELFARE_STATE")
 
 # Ergebnisse anzeigen und speichern
 print(described_variables)
@@ -272,6 +284,18 @@ writeLines(
   ) %>%
     kable_styling(latex_options = c("hold_position")),
   "../TeX/assets/variables.tex"
+)
+
+# Erstelle die Tabelle für WELFARE_STATE
+print(welfare_state_summary)
+writeLines(
+  kable(welfare_state_summary,
+        format = "latex",
+        booktabs = TRUE,
+        caption = "Übersicht über die Verteilung der Wohlfahrtsstaatentypen"
+  ) %>%
+    kable_styling(latex_options = c("hold_position")),
+  "../TeX/assets/variables_welfare.tex"
 )
 
 ##########################################
@@ -326,6 +350,7 @@ filter_data_high    <- subset(merged_data, SUBJECT ==
 # Fixed Effects Modelle (mit Kontrollvariablen)
 model_low_fe_control    <- plm(
   UNEMPLOYMENT_RATE_PERCENT ~ ICT_INVEST_SHARE_GDP +
+    YEAR_FACTOR +
     GDP_PER_CAPITA +
     PERCENT_EMPLOYEES_TUD,
   data = filter_data_low,
@@ -335,6 +360,7 @@ model_low_fe_control    <- plm(
 
 model_medium_fe_control <- plm(
   UNEMPLOYMENT_RATE_PERCENT ~ ICT_INVEST_SHARE_GDP +
+    YEAR_FACTOR +
     GDP_PER_CAPITA +
     PERCENT_EMPLOYEES_TUD,
   data = filter_data_medium,
@@ -344,6 +370,7 @@ model_medium_fe_control <- plm(
 
 model_high_fe_control   <- plm(
   UNEMPLOYMENT_RATE_PERCENT ~ ICT_INVEST_SHARE_GDP +
+    YEAR_FACTOR +
     GDP_PER_CAPITA +
     PERCENT_EMPLOYEES_TUD,
   data = filter_data_high,
@@ -403,10 +430,16 @@ interaction_models  <- list(
     model_high_fe_interaction
 )
 
-# Ergebnisse anzeigen und speichern
-msummary(control_models, stars = TRUE)
+# Ergebnisse anzeigen und speichern (ohne YEAR_FACTOR)
 msummary(control_models, stars = TRUE,
+         coef_omit = "YEAR_FACTOR")
+msummary(control_models, stars = TRUE,
+         coef_omit = "YEAR_FACTOR",
          output = "../TeX/assets/models_control.tex")
-msummary(interaction_models, stars = TRUE)
+
 msummary(interaction_models, stars = TRUE,
+         coef_omit = "YEAR_FACTOR")
+msummary(interaction_models, stars = TRUE,
+         coef_omit = "YEAR_FACTOR",
          output = "../TeX/assets/models_interaction.tex")
+

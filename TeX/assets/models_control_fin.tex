@@ -10,7 +10,7 @@ note{}={+ p \num{< 0.1}, * p \num{< 0.05}, ** p \num{< 0.01}, *** p \num{< 0.001
 colspec={Q[]Q[]Q[]Q[]},
 column{2,3,4}={}{halign=c,},
 column{1}={}{halign=l,},
-hline{9}={1,2,3,4}{solid, black, 0.05em},
+hline{13}={1,2,3,4}{solid, black, 0.05em},
 }                     %% tabularray inner close
 \toprule
 & niedriges
@@ -20,19 +20,23 @@ Bildungsniv.
 (Kontrolle) & hohes
 Bildungsniv.
 (Kontrolle) \\ \midrule %% TinyTableHeader
-ICT\_INVEST\_SHARE\_GDP & \num{0.572}   & \num{0.377}    & \num{0.154}    \\
-& (\num{0.517}) & (\num{0.310})  & (\num{0.173})  \\
-GDP\_PER\_CAPITA         & \num{-0.120}* & \num{-0.097}** & \num{-0.050}** \\
-& (\num{0.051}) & (\num{0.031})  & (\num{0.017})  \\
-PERCENT\_EMPLOYEES\_TUD  & \num{0.136}   & \num{0.131}*   & \num{0.040}    \\
-& (\num{0.105}) & (\num{0.063})  & (\num{0.035})  \\
+ICT\_INVEST\_SHARE\_GDP     & \num{2.371}***  & \num{1.225}***  & \num{0.477}***  \\
+& (\num{0.232})   & (\num{0.147})   & (\num{0.086})   \\
+GDP\_PER\_CAPITA             & \num{-0.193}*** & \num{-0.150}*** & \num{-0.083}*** \\
+& (\num{0.018})   & (\num{0.012})   & (\num{0.007})   \\
+PERCENT\_TERTIARY\_EDUCATION & \num{0.590}***  & \num{0.288}***  & \num{0.155}***  \\
+& (\num{0.046})   & (\num{0.029})   & (\num{0.017})   \\
+REGULATION\_STRICTNESS        & \num{-0.127}    & \num{-0.112}+   & \num{-0.079}*   \\
+& (\num{0.094})   & (\num{0.059})   & (\num{0.035})   \\
+PERCENT\_EMPLOYEES\_TUD      & \num{0.127}**   & \num{0.107}***  & \num{0.026}+    \\
+& (\num{0.039})   & (\num{0.024})   & (\num{0.014})   \\
 YEAR\_FACTOR & True & True & True \\
-Num.Obs.                   & \num{502}     & \num{502}      & \num{502}      \\
-R2                         & \num{0.272}   & \num{0.301}    & \num{0.276}    \\
-R2 Adj.                    & \num{0.193}   & \num{0.226}    & \num{0.198}    \\
-AIC                        & \num{2832.9}  & \num{2320.2}   & \num{1735.7}   \\
-BIC                        & \num{2921.5}  & \num{2408.8}   & \num{1824.3}   \\
-RMSE                       & \num{3.90}    & \num{2.34}     & \num{1.31}     \\
+Num.Obs.                       & \num{3973}      & \num{3973}      & \num{3973}      \\
+R2                             & \num{0.309}     & \num{0.312}     & \num{0.286}     \\
+R2 Adj.                        & \num{0.300}     & \num{0.304}     & \num{0.277}     \\
+AIC                            & \num{21365.2}   & \num{17724.1}   & \num{13503.3}   \\
+BIC                            & \num{21509.8}   & \num{17868.7}   & \num{13647.9}   \\
+RMSE                           & \num{3.54}      & \num{2.24}      & \num{1.32}      \\
 \bottomrule
 \end{talltblr}
 }

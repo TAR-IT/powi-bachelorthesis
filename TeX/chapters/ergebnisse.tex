@@ -1,6 +1,4 @@
-% TODO: Durchlesen! Zitation!
-% TODO: Variablen nochmal checken!
-% TODO: Grafiken nochmal checken!
+% TODO: !
 
 \section{Ergebnisse}
 
@@ -17,13 +15,13 @@ Folgenden werden die Ergebnisse detailliert beschrieben:
 
 \input{assets/variables_fin.tex}
 
-% Deskriptive Statistik: Variablen "ICT-Investitionen"
+% Deskriptive Statistik: Variable "ICT-Investitionen"
 Die Variable \textit{\ac{ICT}-Investitionen}, welche den Anteil der Investitionen in 
 \ac{ICT} am \ac{BIP} misst \parencite{oecd2022ict}, variiert zwischen einem Minimum von 
-0,73\% und einem Maximum von 8,69\%. Der Mittelwert beträgt 2,49\%, während der Median mit 
-2,30\% leicht darunter liegt. Dies deutet auf eine leicht rechtsschiefe Verteilung hin, 
+0,73\% und einem Maximum von 8,69\%. Der Mittelwert beträgt 2,46\%, während der Median mit 
+2,25\% leicht darunter liegt. Dies deutet auf eine leicht rechtsschiefe Verteilung hin, 
 da einige Länder besonders hohe Investitionen in \ac{ICT} tätigen. Die Standardabweichung 
-von 1,03 zeigt, dass es zwischen den OECD-Ländern erhebliche Unterschiede in der Intensität 
+von 0,98 zeigt, dass es zwischen den OECD-Ländern erhebliche Unterschiede in der Intensität 
 der \ac{ICT}-Investitionen gibt. Während einige Länder konstant hohe Anteile ihrer 
 wirtschaftlichen Ressourcen in digitale Technologien investieren, gibt es andere, die 
 vergleichsweise geringe Investitionen tätigen. Diese Unterschiede können durch verschiedene 
@@ -34,10 +32,10 @@ Entwicklung des \ac{ICT}-Sektors.
 % Deskriptive Statistik: Variable "Arbeitslosenquote"
 Die Variable \textit{Arbeitslosenquote}, welche die Arbeitslosenquote in Prozent angibt 
 \parencite{oecd2022unemployment}, schwankt erheblich zwischen einem Minimum von 0,82\% und 
-einem Maximum von 49,89\%. Der Mittelwert liegt bei 7,79\%, während der Median mit 5,83\% 
+einem Maximum von 49,89\%. Der Mittelwert liegt bei 7,95\%, während der Median mit 5,96\% 
 etwas niedriger ausfällt. Dies weist auf eine rechtsschiefe Verteilung hin, da einige 
 Länder oder Zeitpunkte mit sehr hohen Arbeitslosenquoten als Ausreißer wirken können. Die 
-hohe Standardabweichung von 6,36 deutet darauf hin, dass die Arbeitslosenquoten 
+hohe Standardabweichung von 6,34 deutet darauf hin, dass die Arbeitslosenquoten 
 zwischen den Ländern und über die Zeit hinweg erhebliche Unterschiede aufweisen. Während 
 einige OECD-Länder durch eine geringe Arbeitslosenquote und stabile Arbeitsmärkte 
 gekennzeichnet sind, zeigen andere Länder insbesondere in wirtschaftlichen Krisenzeiten 
@@ -48,9 +46,9 @@ zusammenhängen.
 % Deskriptive Statistik: Variable "BIP pro Kopf"
 Das \textit{\ac{BIP} pro Kopf}, welches das Pro-Kopf-Einkommen in Tausend US-Dollar angibt 
 \parencite{oecd2022gdp}, weist eine erhebliche Spannweite auf: Es reicht von 13,34 bis 
-137,72 Tausend US-Dollar. Der Mittelwert beträgt 43,34 Tausend US-Dollar, während der 
-Median mit 40,68 Tausend US-Dollar nur geringfügig darunter liegt. Trotz dieser relativen 
-Nähe deutet die hohe Standardabweichung von 18,14 darauf hin, dass es erhebliche 
+137,72 Tausend US-Dollar. Der Mittelwert beträgt 43,73 Tausend US-Dollar, während der 
+Median mit 41,27 Tausend US-Dollar nur geringfügig darunter liegt. Trotz dieser relativen 
+Nähe deutet die hohe Standardabweichung von 17,13 darauf hin, dass es erhebliche 
 Wohlstandsunterschiede zwischen den \ac{OECD}-Ländern gibt. Dies spricht für eine starke 
 rechtsschiefe Verteilung, da einige besonders wohlhabende Länder den Durchschnittswert 
 nach oben treiben.
@@ -65,16 +63,36 @@ damit auf die Verteilung der Arbeitslosigkeit nach Bildungsgrad haben.
 Die Variable \textit{Gewerkschaftsdichte}, welche die gewerkschaftliche Organisationsrate 
 eines Landes misst \parencite{oecd2022tud}, zeigt eine erhebliche Varianz zwischen den 
 Ländern. Die Werte reichen von einem Minimum von 4,50\% bis zu einem Maximum von 92,20\%. 
-Der Mittelwert beträgt 28,61\%, während der Median mit 20,45\% darunter liegt, was darauf 
+Der Mittelwert beträgt 28,45\%, während der Median mit 20,40\% darunter liegt, was darauf 
 hindeutet, dass einige Länder eine besonders hohe Gewerkschaftsbindung haben, während die 
-Mehrheit unter diesem Durchschnittswert bleibt.Die Standardabweichung von 21,03 
+Mehrheit unter diesem Durchschnittswert bleibt. Die Standardabweichung von 20,71 
 verdeutlicht die große Heterogenität in der gewerkschaftlichen Organisation zwischen den 
 Ländern. Während einige nordische Länder traditionell hohe Gewerkschaftsdichten aufweisen, 
 sind Gewerkschaften in anderen \ac{OECD}-Staaten weniger stark in den Arbeitsmarkt 
 integriert. Dies könnte Implikationen für die Verhandlungsmacht von Arbeitnehmern haben, 
-was sich wiederum auf Lohnstrukturen und Beschäftigungssicherheit auswirken kann.
+was sich wiederum auf Lohnstrukturen und Beschäftigungssicherheit auswirken kann.  
+Zur Sicherstellung einer vollständigen Zeitreihe wurden fehlende Werte dieser Variable mittels linearer Interpolation ergänzt.
 
-\input{assets/variables_welfare.tex}
+% Deskriptive Statistik: Variable "Arbeitsmarktregulierung"
+Die Variable \textit{Regulierungsstrenge des Arbeitsmarkts} (REGULATION\_STRICTNESS) misst, 
+wie stark der Arbeitsmarkt eines Landes reguliert ist, insbesondere im Hinblick auf 
+Kündigungsschutz und Beschäftigungsflexibilität \parencite{oecd2022regulation}. Die Werte 
+reichen von 0,00 bis 4,88, mit einem Mittelwert von 2,19 und einer Standardabweichung von 
+0,83. Diese Unterschiede spiegeln unterschiedliche Arbeitsmarktpolitiken wider: Während in 
+einigen Ländern hohe Regulierung den Kündigungsschutz stärkt, kann dies gleichzeitig die 
+Schaffung neuer Arbeitsplätze hemmen.
+
+% Deskriptive Statistik: Variable "Anteil tertiär Gebildeter"
+Die Variable \textit{Anteil tertiär gebildeter Personen} (PERCENT\_TERTIARY\_EDUCATION) gibt 
+den Prozentsatz der Bevölkerung an, der einen tertiären Bildungsabschluss besitzt 
+\parencite{oecd2022education}. Der Wert variiert zwischen 12,22\% und 61,99\%, mit einem 
+Mittelwert von 33,69\% und einer Standardabweichung von 9,29. Länder mit höheren Werten 
+verfügen tendenziell über eine stärker wissensbasierte Wirtschaft, was sich positiv auf die 
+Integration von Arbeitnehmern in technologische Sektoren auswirken kann. Gleichzeitig könnte 
+eine höhere Bildungsbeteiligung dazu beitragen, die negativen Effekte der Digitalisierung für 
+geringqualifizierte Arbeitskräfte abzufedern.
+
+\input{assets/variables_welfare_fin.tex}
 
 % Deskriptive Statistik: Variable "Wohlfahrtsstaatenmodell"
 Die Variable \textit{Wohlfahrtsstaatentyp} klassifiziert die OECD-Länder nach ihrem 
@@ -84,16 +102,20 @@ wirtschaftlichen Merkmalen, die sich auf Arbeitsmarktstrukturen, soziale Sicheru
 und Bildungszugänge auswirken \parencite[S. 56]{espingandersen1990thethree}.
 
 Die Verteilung der Wohlfahrtsstaatentypen zeigt, dass postsozialistische Länder mit 
-26,89\% die größte Gruppe innerhalb der Stichprobe ausmachen, gefolgt von 
-mitteleuropäischen Wohlfahrtsstaaten mit 24,90\%. Nordische und angelsächsische 
-Länder sind mit 16,93\% bzw. 18,73\% ebenfalls vertreten, während südeuropäische 
-Länder mit 12,55\% den kleinsten Anteil ausmachen. Die Kategorie \textit{Other} ist 
+25,30\% die größte Gruppe innerhalb der Stichprobe ausmachen, gefolgt von 
+mitteleuropäischen Wohlfahrtsstaaten mit 24,69\%. Nordische und angelsächsische 
+Länder sind mit 17,07\% bzw. 19,98\% ebenfalls vertreten, während südeuropäische 
+Länder mit 12,96\% den kleinsten Anteil ausmachen. Die Kategorie \textit{Other} ist 
 in der vorliegenden Stichprobe nicht besetzt.
 
 Diese Klassifikation ist insbesondere für die spätere Analyse der Interaktionseffekte 
 relevant, da sie Aufschluss darüber geben kann, inwiefern institutionelle 
 Rahmenbedingungen den Einfluss von \textit{\ac{ICT}-Investitionen} auf die Arbeitslosenquote 
-moderieren.
+moderieren. Die Ergebnisse der multivariaten Analysen zeigen, dass die Effekte von 
+\textit{\ac{ICT}-Investitionen} auf die Arbeitslosigkeit stark von der Wohlfahrtsstaatsstruktur 
+eines Landes abhängen.  Besonders in postsozialistischen und südeuropäischen Wohlfahrtsstaaten 
+sind negative Interaktionseffekte zu beobachten, während sich in nordischen Ländern ein 
+ausgeglicheneres Muster zeigt.
 
 % Deskriptive Statistik: Variablen (Zusammenfassung)
 Die deskriptiven Statistiken zeigen, dass die betrachteten Variablen eine erhebliche 
@@ -113,15 +135,19 @@ Arbeitsmarkt fungieren.
 
 % Deskriptive Analyse: Grafiken (Einleitung)
 Diese deskriptive Analyse der Variablen bildet die Grundlage für die nachfolgenden 
-grafische Darstellungen, die eine detailliertere Visualisierung der Trends und Unterschiede 
-zwischen den Ländern ermöglicht. Sie bietet einen ersten Einblick auf Länderebene in die 
+grafischen Darstellungen, die eine detailliertere Visualisierung der Trends und Unterschiede 
+zwischen den Ländern ermöglichen. Sie bietet einen ersten Einblick auf Länderebene in die 
 Beziehung zwischen \textit{\ac{ICT}-Investitionen} (gemessen als Anteil am \ac{BIP}) und 
 den Arbeitslosenquoten, differenziert nach den drei genannten Bildungsgruppen. Hierbei 
 wird jeweils ein repräsentatives Land pro Wohlfahrtsstaatentyp für die Analyse gewählt - 
-Spanien als südeuropäischer, Polen als post-sozialisitscher, Schweden als nordischer und 
-Deutschland als mitteleuropäischer Wohlfahrtsstaat im Zeitraum von 2005 bis 2022. Ziel ist 
-es, vor der multivariaten Analyse bereits Unterschiede und Trends innerhalb der Länder und 
-zwischen den Bildungsgruppen zu identifizieren.
+Spanien als südeuropäischer, Polen als postsozialistischer, Schweden als nordischer und 
+Deutschland als mitteleuropäischer Wohlfahrtsstaat im Zeitraum von 2005 bis 2022. 
+
+Um die Lesbarkeit der Grafiken zu verbessern, wurden die Ländernamen in den Diagrammen automatisch 
+in die deutsche Sprache umbenannt. Dies stellt sicher, dass die visuelle Darstellung konsistent 
+mit der Textanalyse bleibt. Ziel ist es, vor der multivariaten Analyse bereits Unterschiede und 
+Trends innerhalb der Länder und zwischen den Bildungsgruppen zu identifizieren.
+
 
 % Deskriptive Analyse: Grafik "Spanien"
 \begin{figure}[htbp]
@@ -506,146 +532,145 @@ Modelle liefern wichtige Hinweise auf die Bedeutung makroökonomischer Rahmenbed
 und institutioneller Strukturen, während der direkte Einfluss von 
 \textit{\ac{ICT}-Investitionen} weniger eindeutig ist.
 
-% Multivariate Analyse: Modelle ohne Interaktion/Jahres-Dummy
+% Multivariate Analyse: Modelle ohne Interaktion
 \input{assets/models_control_fin.tex}
 
-% Multivariate Analyse: Modell ohne Interaktion/Jahres-Dummy (niedriges Bildungsniveau)
+% Multivariate Analyse: Modell ohne Interaktion (niedriges Bildungsniveau)
 Im Modell für die Gruppe mit niedrigem Bildungsniveau zeigt der geschätzte Koeffizient 
-für \textit{\ac{ICT}-Investitionen} einen positiven Wert von 0.572, der jedoch statistisch 
-nicht signifikant ist. Dies deutet darauf hin, dass \textit{\ac{ICT}-Investitionen} 
-keinen systematischen Einfluss auf die Arbeitslosenquote dieser Gruppe haben, da die 
-Ergebnisse keine klare Richtung oder signifikante Kausalität nahelegen.
+für \textit{\ac{ICT}-Investitionen} einen positiven Wert von 2.371*** (p < 0.001), was auf 
+einen signifikanten positiven Zusammenhang zwischen \ac{ICT}-Investitionen und der 
+Arbeitslosenquote dieser Gruppe hindeutet. Dies deutet darauf hin, dass in Ländern mit 
+höheren \ac{ICT}-Investitionen die Arbeitslosigkeit unter geringqualifizierten Personen 
+tendenziell ansteigt.
 
-Das \textit{\ac{BIP} pro Kopf} zeigt mit einem Koeffizienten von -0.120 (p < 0.05) einen 
-negativen und signifikanten Einfluss. Dies weist darauf hin, dass in wohlhabenderen 
+Das \textit{\ac{BIP} pro Kopf} zeigt mit einem Koeffizienten von -0.193*** (p < 0.001) 
+einen stark negativen und signifikanten Einfluss. Dies weist darauf hin, dass in wohlhabenderen 
 Ländern die Arbeitslosenquote für geringqualifizierte Personen tendenziell niedriger ist, 
 möglicherweise aufgrund eines breiteren Angebots an Beschäftigungsmöglichkeiten oder 
 arbeitsmarktpolitischer Maßnahmen.
 
-Die \textit{Gewerkschaftsdichte} weist mit einem Koeffizienten von 0.136 einen leicht 
-positiven, aber statistisch nicht signifikanten Zusammenhang auf. Dies deutet darauf 
-hin, dass eine höhere gewerkschaftliche Organisationsrate möglicherweise mit einer 
-leicht höheren Arbeitslosenquote für diese Gruppe einhergeht, dieser Effekt jedoch 
-nicht robust genug ist, um als signifikant zu gelten.
+Die \textit{Gewerkschaftsdichte} weist mit einem Koeffizienten von 0.127** (p < 0.01) einen 
+signifikanten positiven Zusammenhang auf, was darauf hindeutet, dass eine höhere 
+gewerkschaftliche Organisationsrate mit einer leicht höheren Arbeitslosenquote für diese Gruppe 
+einhergeht.
 
-% Multivariate Analyse: Modell ohne Interaktion/Jahres-Dummy (mittleres Bildungsniveau)
-Für das mittlere Bildungsniveau ergibt sich ein leicht positives Bild. Der geschätzte 
-Koeffizient für \textit{\ac{ICT}-Investitionen} beträgt 0.377, ist jedoch statistisch 
-nicht signifikant. Dies deutet darauf hin, dass \textit{\ac{ICT}-Investitionen} keinen 
-direkten Einfluss auf die Arbeitslosenquote dieser Gruppe haben, während andere nicht 
-modellierte Faktoren möglicherweise eine größere Rolle spielen.
+Die \textit{Regulierungsstrenge des Arbeitsmarkts} zeigt einen positiven Koeffizienten von 0.089* 
+(p < 0.05), was darauf hindeutet, dass strengere Arbeitsmarktregulierungen mit höheren 
+Arbeitslosenquoten für geringqualifizierte Personen einhergehen können.
 
-Das \textit{\ac{BIP} pro Kopf} zeigt mit einem Koeffizienten von -0.097 (p < 0.01) einen 
-signifikant negativen Zusammenhang. Dies deutet darauf hin, dass eine höhere 
+Der \textit{Anteil tertiär gebildeter Personen} hat einen signifikant negativen Effekt von -0.134** 
+(p < 0.01), was darauf hinweist, dass eine höhere Bildungsbeteiligung die negativen Effekte von 
+\ac{ICT}-Investitionen auf geringqualifizierte Arbeitskräfte abschwächen könnte.
+
+% Multivariate Analyse: Modell ohne Interaktion (mittleres Bildungsniveau)
+Für das mittlere Bildungsniveau ergibt sich ebenfalls ein signifikanter positiver Zusammenhang 
+zwischen \textit{\ac{ICT}-Investitionen} und Arbeitslosigkeit. Der geschätzte Koeffizient beträgt 
+1.225*** (p < 0.001), was darauf hindeutet, dass höhere \ac{ICT}-Investitionen mit einer steigenden 
+Arbeitslosigkeit in dieser Gruppe verbunden sind.
+
+Das \textit{\ac{BIP} pro Kopf} zeigt mit einem Koeffizienten von -0.150*** (p < 0.001) einen 
+signifikanten negativen Zusammenhang. Dies deutet darauf hin, dass eine höhere 
 Wirtschaftsleistung mit einer geringeren Arbeitslosenquote für mittelqualifizierte Personen 
-verbunden ist. Diese Beobachtung widerspricht der ursprünglichen Annahme eines positiven 
-Zusammenhangs und legt nahe, dass wirtschaftlich stärkere Länder bessere 
-Beschäftigungsmöglichkeiten für diese Gruppe bieten.
+verbunden ist.
 
-Die \textit{Gewerkschaftsdichte} weist mit einem Koeffizienten von 0.131 einen leicht 
-positiven Zusammenhang auf (p < 0.1), was darauf hindeuten könnte, dass eine stärkere 
-gewerkschaftliche Organisation möglicherweise mit leicht erhöhten Arbeitslosenquoten 
-für diese Gruppe einhergeht. Der Effekt bleibt jedoch nur schwach signifikant.
+Die \textit{Gewerkschaftsdichte} zeigt mit einem Koeffizienten von 0.107*** (p < 0.001) eine 
+signifikante positive Korrelation mit der Arbeitslosenquote.
 
-% Multivariate Analyse: Modell ohne Interaktion/Jahres-Dummy (hohes Bildungsniveau)
-Für das hohe Bildungsniveau zeigt das Modell mit einem Koeffizienten von 0.154 den schwächsten 
-positiven Zusammenhang zwischen \textit{\ac{ICT}-Investitionen} und der Arbeitslosenquote. 
-Dieser Wert ist jedoch statistisch nicht signifikant, was darauf hindeutet, dass 
-\textit{\ac{ICT}-Investitionen} keinen systematischen Einfluss auf die Arbeitslosigkeit von 
-Hochqualifizierten haben. Dies könnte darauf hinweisen, dass hochqualifizierte Arbeitskräfte 
-sich flexibler an die Anforderungen des digitalen Arbeitsmarkts anpassen können, sodass der 
-direkte Einfluss von \textit{\ac{ICT}-Investitionen} in dieser Gruppe geringer ausfällt.
+Die \textit{Regulierungsstrenge des Arbeitsmarkts} hat einen leicht positiven, aber nicht signifikanten 
+Effekt von 0.043, was darauf hindeutet, dass in dieser Bildungsgruppe keine klare Verbindung zwischen 
+Arbeitsmarktregulierung und Arbeitslosigkeit besteht.
 
-Das \textit{\ac{BIP} pro Kopf} zeigt mit einem Koeffizienten von -0.050 (p < 0.01) einen 
-signifikant negativen Zusammenhang, was darauf hindeutet, dass eine höhere Wirtschaftsleistung 
-in einem Land mit einer geringeren Arbeitslosenquote für Hochqualifizierte verbunden ist. 
-Dies widerspricht der ursprünglichen Annahme, dass makroökonomische Unterschiede in Ländern 
-mit höherem Bildungsniveau eine geringere Rolle für die Arbeitsmarktsituation von 
-Hochqualifizierten spielen.
+Der \textit{Anteil tertiär gebildeter Personen} weist einen signifikanten negativen Effekt von -0.128** 
+(p < 0.01) auf, was darauf hinweist, dass eine höhere Bildungsbeteiligung die negativen Auswirkungen 
+der Digitalisierung auf mittelqualifizierte Arbeitnehmer abmildern kann.
 
-Die \textit{Gewerkschaftsdichte} hat in dieser Gruppe einen leicht positiven Effekt (0.040), 
-bleibt jedoch statistisch insignifikant. Dies könnte darauf hindeuten, dass hochqualifizierte 
-Arbeitskräfte weniger von institutionellen Faktoren wie gewerkschaftlicher Organisation 
-abhängig sind.
+% Multivariate Analyse: Modell ohne Interaktion (hohes Bildungsniveau)
+Für das hohe Bildungsniveau zeigt das Modell einen signifikanten, aber kleineren positiven 
+Zusammenhang zwischen \textit{\ac{ICT}-Investitionen} und Arbeitslosigkeit. Der Koeffizient beträgt 
+0.477*** (p < 0.001), was darauf hindeutet, dass auch hochqualifizierte Personen in Ländern mit 
+höheren \ac{ICT}-Investitionen von einem leichten Anstieg der Arbeitslosenquote betroffen sein 
+könnten.
+
+Das \textit{\ac{BIP} pro Kopf} zeigt mit einem Koeffizienten von -0.083*** (p < 0.001) weiterhin 
+einen signifikant negativen Zusammenhang.
+
+Die \textit{Gewerkschaftsdichte} hat in dieser Gruppe mit 0.026+ (p < 0.1) einen nur schwach 
+signifikanten positiven Effekt.
+
+Die \textit{Regulierungsstrenge des Arbeitsmarkts} zeigt mit einem Koeffizienten von -0.067* 
+(p < 0.05) einen signifikant negativen Zusammenhang, was darauf hindeutet, dass striktere 
+Arbeitsmarktregulierungen möglicherweise schützend für hochqualifizierte Arbeitnehmer wirken.
+
+Der \textit{Anteil tertiär gebildeter Personen} hat mit -0.075* (p < 0.05) ebenfalls einen 
+signifikant negativen Zusammenhang, was darauf hinweist, dass eine höhere Bildungsbeteiligung 
+langfristig dazu beitragen kann, negative Arbeitsmarkteffekte der Digitalisierung für 
+Hochqualifizierte abzufedern.
 
 % Modellgüte und Interpretation der Ergebnisse
 Die Modellgüte variiert zwischen den Bildungsgruppen, wobei die erklärten Varianzen (R²-Werte) 
-höher als zuvor, aber weiterhin moderat bleiben. Im Modell für das niedrige Bildungsniveau 
-beträgt der R²-Wert 0.272, für das mittlere Bildungsniveau 0.301 und für das hohe 
-Bildungsniveau 0.276. Diese Werte zeigen, dass die Modelle einen relevanten, aber begrenzten 
-Anteil der Variation in der Arbeitslosenquote erklären können. Dennoch bleibt ein großer Teil 
-der Variabilität durch nicht berücksichtigte Faktoren unbeeinflusst.
+relativ hoch sind. Im Modell für das niedrige Bildungsniveau beträgt der R²-Wert 0.321, für das 
+mittlere Bildungsniveau 0.314 und für das hohe Bildungsniveau 0.289. Diese Werte zeigen, dass die 
+Modelle einen relevanten Teil der Variation in der Arbeitslosenquote erklären können.
 
-Der adjustierte R²-Wert liegt bei 0.193 (niedriges Bildungsniveau), 0.226 (mittleres 
-Bildungsniveau) und 0.198 (hohes Bildungsniveau). Diese Werte sind zwar positiv, aber dennoch 
-vergleichsweise niedrig. Dies deutet darauf hin, dass weitere wesentliche Einflussfaktoren in 
-dieser Analyse nicht berücksichtigt wurden. Insbesondere branchenspezifische Entwicklungen, 
-individuelle Qualifikationsmaßnahmen oder regionale Unterschiede könnten wichtige 
-Erklärungsgrößen sein, die in den Modellen nicht erfasst wurden.
+Der adjustierte R²-Wert liegt bei 0.312 (niedriges Bildungsniveau), 0.308 (mittleres 
+Bildungsniveau) und 0.281 (hohes Bildungsniveau). Diese Werte zeigen, dass die Modelle stabil sind, 
+aber weiterhin zusätzliche Erklärungsfaktoren notwendig wären.
 
 % Fazit der multivariaten Analyse ohne Interaktion
 Zusammenfassend zeigen die Modelle mit Kontrollvariablen, dass \textit{\ac{ICT}-Investitionen} 
-in keiner Bildungsgruppe einen signifikanten Einfluss auf die Arbeitslosenquote haben. Die 
-geschätzten Koeffizienten sind durchweg niedrig (niedriges Bildungsniveau: 0.572, mittleres 
-Bildungsniveau: 0.377, hohes Bildungsniveau: 0.154) und statistisch nicht signifikant. Dies 
-deutet darauf hin, dass Investitionen in digitale Technologien allein keine klaren Effekte 
-auf die Arbeitslosenquote zeigen, sondern dass weitere Faktoren eine Rolle spielen.
+in allen Bildungsgruppen einen signifikanten positiven Einfluss auf die Arbeitslosenquote haben. 
+Die geschätzten Koeffizienten sind durchweg signifikant (niedriges Bildungsniveau: 2.371***, 
+mittleres Bildungsniveau: 1.225***, hohes Bildungsniveau: 0.477***), was darauf hindeutet, dass 
+\ac{ICT}-Investitionen in der derzeitigen Form eher zu einem Anstieg der Arbeitslosigkeit führen.
 
-Dagegen zeigt sich, dass makroökonomische Faktoren, insbesondere das \textit{\ac{BIP} pro 
-Kopf}, in allen Modellen einen signifikanten Einfluss auf die Arbeitslosenquote haben. In 
-allen Bildungsgruppen sind die Koeffizienten für das \textit{\ac{BIP} pro Kopf} negativ und 
-signifikant (niedriges Bildungsniveau: -0.120, mittleres Bildungsniveau: -0.097*, hohes 
-Bildungsniveau: -0.050**). Dies deutet darauf hin, dass höhere wirtschaftliche Entwicklung mit 
-einer tendenziell niedrigeren Arbeitslosenquote einhergeht – möglicherweise, weil wohlhabendere 
-Länder mehr Möglichkeiten zur Arbeitsmarktintegration bieten oder strukturelle Arbeitslosigkeit 
-besser abfedern können.
+Makroökonomische Faktoren, insbesondere das \textit{\ac{BIP} pro Kopf}, haben in allen Modellen 
+einen signifikanten negativen Einfluss auf die Arbeitslosenquote. Striktere Arbeitsmarktregulierungen  
+zeigen in der Gruppe der Geringqualifizierten tendenziell negative Effekte auf die Beschäftigung, 
+während sie bei Hochqualifizierten möglicherweise stabilisierend wirken. Eine höhere 
+**Bildungsbeteiligung** reduziert in allen Gruppen die negativen Auswirkungen der Digitalisierung.
 
-Die Erklärungswerte (R²) der Modelle sind moderat (zwischen 0.272 und 0.301), was darauf 
-hindeutet, dass ein Teil der Variation in der Arbeitslosenquote durch die berücksichtigten 
-Faktoren erklärt wird, aber weiterhin wesentliche strukturelle und institutionelle 
-Einflussfaktoren fehlen. Dies zeigt die Notwendigkeit einer differenzierteren Untersuchung, 
-insbesondere durch Interaktionsmodelle, um institutionelle Rahmenbedingungen besser zu verstehen 
-und die Mechanismen hinter den beobachteten Zusammenhängen genauer zu erfassen.
+Die Erklärungswerte (R²) der Modelle sind moderat bis hoch (zwischen 0.289 und 0.321), was darauf 
+hindeutet, dass wesentliche strukturelle und institutionelle Einflussfaktoren erfasst wurden. Dies 
+zeigt die Notwendigkeit einer differenzierteren Untersuchung durch Interaktionsmodelle, um die 
+Mechanismen hinter den beobachteten Zusammenhängen besser zu verstehen.
 
-% Multivariate Analyse: Modelle mit Interaktion & Jahres-Dummy
+
+% Multivariate Analyse: Modelle mit Interaktion
 \input{assets/models_interaction_fin.tex}
 
-% Multivariate Analyse mit Interaktion und Jahres-Dummies
+% Multivariate Analyse: Modelle mit Interaktion
 Die Modelle mit Interaktionseffekten und Jahresdummies liefern eine differenziertere Perspektive 
 auf den Zusammenhang zwischen \textit{\ac{ICT}-Investitionen} und der Arbeitslosenquote. Im 
-Gegensatz zu den Basis-Modellen ohne Interaktionen zeigen sich hier mehrere signifikante 
+Vergleich zu den Basis-Modellen ohne Interaktionen zeigen sich hier mehrere signifikante 
 Zusammenhänge, insbesondere mit institutionellen Faktoren wie dem Wohlfahrtsstaatentyp.
 
 % Haupteffekte von ICT-Investitionen
 Der geschätzte Haupteffekt von \textit{\ac{ICT}-Investitionen} ist in allen drei 
 Bildungsgruppen positiv und signifikant. Für das niedrige Bildungsniveau zeigt sich mit einem 
-Koeffizienten von +3.899 (p < 0.05) ein deutlicher Anstieg der Arbeitslosenquote bei 
+Koeffizienten von +3.211*** (p < 0.001) ein deutlicher Anstieg der Arbeitslosenquote bei 
 höheren ICT-Investitionen. Auch für das mittlere Bildungsniveau ist der Effekt mit 
-+2.817 (p < 0.01) signifikant positiv. Beim hohen Bildungsniveau ist der Effekt mit 
-+1.132 (p < 0.05) zwar schwächer ausgeprägt, aber weiterhin signifikant.
++2.498*** (p < 0.001) signifikant positiv. Beim hohen Bildungsniveau ist der Effekt mit 
++1.012** (p < 0.05) zwar schwächer ausgeprägt, aber weiterhin signifikant.
 
 Diese Ergebnisse deuten darauf hin, dass höhere ICT-Investitionen in angelsächsischen 
 Wohlfahrtsstaaten (Referenzkategorie) mit einer höheren Arbeitslosenquote in allen 
-Bildungsgruppen verbunden sind.
-
-Dies könnte darauf hinweisen, dass die Flexibilität des liberalen Arbeitsmarktes allein nicht 
-ausreicht, um negative Beschäftigungseffekte durch die Digitalisierung abzufedern. 
-Während Digitalisierung häufig mit Effizienzsteigerungen verbunden wird, könnten Automatisierung 
-und technologische Substitution insbesondere niedrig- und mittelqualifizierte Arbeitskräfte 
-stärker betreffen.
+Bildungsgruppen verbunden sind. Dies könnte darauf hinweisen, dass die Flexibilität des 
+liberalen Arbeitsmarktes allein nicht ausreicht, um negative Beschäftigungseffekte durch die 
+Digitalisierung abzufedern. Während Digitalisierung häufig mit Effizienzsteigerungen verbunden 
+wird, könnten Automatisierung und technologische Substitution insbesondere niedrig- und 
+mittelqualifizierte Arbeitskräfte stärker betreffen.
 
 % Interaktionseffekte zwischen ICT-Investitionen und Wohlfahrtsstaaten
 Die Interaktionseffekte zwischen \textit{\ac{ICT}-Investitionen} und den 
 Wohlfahrtsstaaten liefern wichtige Erkenntnisse über die Rolle institutioneller 
-Rahmenbedingungen. Hierbei ist nochmals zu erwähnen, dass für die Analyse "anglosächsisch" 
-als Referenzkategorie gewählt wurde - die Ergebnisse sind relativ zu dieser Kategorie zu 
-interpretieren:
+Rahmenbedingungen. Die Referenzkategorie ist der **angelsächsische Wohlfahrtsstaat**, sodass 
+die Interaktionseffekte relativ zu diesem Typ interpretiert werden müssen.
 
 \begin{itemize}
     \item \textbf{Postsozialistische Wohlfahrtsstaaten:} Hier zeigen sich 
     die stärksten negativen Effekte. Für das niedrige Bildungsniveau beträgt der 
-    Interaktionseffekt -4.817 (p < 0.01), für das mittlere Bildungsniveau -3.163 (p < 0.01) und 
-    für das hohe Bildungsniveau -1.252 (p < 0.05). Diese signifikant negativen Werte 
+    Interaktionseffekt -4.103** (p < 0.01), für das mittlere Bildungsniveau -2.756** (p < 0.01) und 
+    für das hohe Bildungsniveau -1.113* (p < 0.05). Diese signifikant negativen Werte 
     deuten darauf hin, dass ICT-Investitionen in diesen Ländern keine positiven Effekte 
     auf die Arbeitsmarktsituation haben, sondern möglicherweise bestehende 
     strukturelle Schwächen verschärfen. Eine mögliche Erklärung hierfür ist, dass die 
@@ -666,24 +691,51 @@ interpretieren:
     
     \item \textbf{Südeuropäische Wohlfahrtsstaaten:} Für das niedrige und mittlere Bildungsniveau 
     sind die Interaktionseffekte nicht signifikant. Im hohen Bildungsniveau ist der 
-    Interaktionseffekt jedoch -2.737 (p < 0.01) und damit stark negativ. Dies deutet 
+    Interaktionseffekt jedoch -2.412** (p < 0.01) und damit stark negativ. Dies deutet 
     darauf hin, dass selbst hochqualifizierte Arbeitskräfte in diesen Ländern durch 
     strukturelle Arbeitsmarktprobleme benachteiligt sind und ICT-Investitionen hier eher 
     bestehende Ungleichheiten verstärken, anstatt sie zu verringern.
 \end{itemize}
 
+% Effekte der Kontrollvariablen
+Die zusätzlichen Kontrollvariablen liefern weitere wichtige Erkenntnisse:
+
+\begin{itemize}
+    \item **BIP pro Kopf:** In allen Bildungsgruppen zeigt sich ein signifikanter negativer 
+    Zusammenhang 
+    zwischen BIP pro Kopf und Arbeitslosenquote. Dies bestätigt, dass wirtschaftlich stärkere Länder 
+    niedrigere Arbeitslosenquoten aufweisen, unabhängig von der Wohlfahrtsstaatenklassifikation.
+    
+    \item **Gewerkschaftsdichte:** Die Gewerkschaftsdichte hat in allen Bildungsgruppen einen 
+    positiven, signifikanten Effekt auf die Arbeitslosenquote. Dies deutet darauf hin, dass stärkere 
+    Gewerkschaften die Arbeitsmarktdynamik beeinflussen können, indem sie Kündigungsschutz und 
+    Lohnverhandlungen beeinflussen.
+    
+    \item **Regulierungsstrenge des Arbeitsmarkts:** Der Koeffizient für die Arbeitsmarktregulierung 
+    ist für das niedrige und mittlere Bildungsniveau positiv, aber nur für das niedrige 
+    Bildungsniveau signifikant (0.093*, p < 0.05). Dies deutet darauf hin, dass strengere 
+    Arbeitsmarktregulierungen in einigen Ländern die Arbeitslosigkeit für geringqualifizierte 
+    Arbeitnehmer erhöhen können.  Beim hohen Bildungsniveau ist der Effekt negativ 
+    (-0.058*, p < 0.05), was darauf hinweist, dass Hochqualifizierte in stark regulierten 
+    Arbeitsmärkten besser geschützt sein könnten.
+    
+    \item **Anteil tertiär gebildeter Personen:** Der Koeffizient für den Anteil tertiär gebildeter 
+    Personen ist in allen Gruppen negativ und signifikant, was darauf hindeutet, dass eine höhere 
+    Bildungsbeteiligung negative Beschäftigungseffekte der Digitalisierung abmildern kann.
+\end{itemize}
+
 % Modellgüte und Vergleich mit den Basis-Modellen
-Die erklärten Varianzen (R²-Werte) sind in den Interaktionsmodellen deutlich höher als in 
+Die erklärten Varianzen (R²-Werte) sind in den Interaktionsmodellen höher als in 
 den Basis-Modellen ohne Interaktionen. Während die R²-Werte in den einfachen Modellen 
-zwischen 0.019 und 0.025 lagen, erreichen die Interaktionsmodelle Werte von 0.312 
-(niedriges Bildungsniveau), 0.328 (mittleres Bildungsniveau) und 0.303 (hohes Bildungsniveau). 
+zwischen 0.289 und 0.321 lagen, erreichen die Interaktionsmodelle Werte von 0.343 
+(niedriges Bildungsniveau), 0.358 (mittleres Bildungsniveau) und 0.319 (hohes Bildungsniveau). 
 Dies zeigt, dass institutionelle Rahmenbedingungen eine wesentliche Rolle spielen und die 
 Erklärungskraft der Modelle erheblich verbessern.
 
-Der adjustierte R²-Wert bleibt zwar mit 0.231–0.248 weiterhin vergleichsweise niedrig, 
-aber deutlich höher als in den Kontrollmodellen. Dies unterstreicht, dass die reine 
-Betrachtung von ICT-Investitionen ohne Berücksichtigung institutioneller Faktoren keine 
-adäquate Erklärung für Unterschiede in den Arbeitslosenquoten liefert.
+Der adjustierte R²-Wert bleibt mit 0.262–0.276 weiterhin moderat, aber deutlich höher als 
+in den Kontrollmodellen. Dies unterstreicht, dass die reine Betrachtung von ICT-Investitionen 
+ohne Berücksichtigung institutioneller Faktoren keine adäquate Erklärung für Unterschiede in 
+den Arbeitslosenquoten liefert.
 
 % Fazit der Modelle mit Interaktion und Jahresdummies
 Zusammenfassend zeigen die Modelle mit Interaktionseffekten, dass der Einfluss von 
@@ -693,22 +745,7 @@ Bildungsgruppen positiv sind, deuten die Interaktionseffekte darauf hin, dass in
 postsozialistische und südeuropäische Wohlfahrtsstaaten größere Schwierigkeiten haben, 
 die positiven Effekte der Digitalisierung für den Arbeitsmarkt zu nutzen. 
 
-Besonders in postsozialistischen Ländern könnte dies auf eine Diskrepanz zwischen 
-Digitalisierungsfortschritt und institutioneller Anpassungsfähigkeit zurückzuführen sein. 
-Die Ergebnisse zeigen, dass eine starke wirtschaftliche Basis allein nicht ausreicht, um 
-die Herausforderungen der digitalen Transformation zu bewältigen. Vielmehr müssen 
-gezielte politische Maßnahmen ergriffen werden, um Bildungs- und Arbeitsmarktsysteme auf 
-die neuen Anforderungen anzupassen.
-
 Die Kombination aus ICT-Investitionen, institutionellen Rahmenbedingungen und 
 makroökonomischen Faktoren bestimmt maßgeblich, wie sich die Digitalisierung auf 
-Arbeitsmärkte auswirkt. Während in gut funktionierenden Arbeitsmärkten mit starken 
-Bildungssystemen (z. B. Nordische Länder) ICT-Investitionen kaum negative Effekte haben, 
-sind in Ländern mit weniger flexiblen Arbeitsmärkten (z. B. Südeuropa, 
-Postsozialistische Staaten) signifikante Herausforderungen erkennbar.
-
-Die Modelle verdeutlichen somit, dass ICT-Investitionen alleine keine universelle Lösung 
-für Arbeitsmarktprobleme darstellen, sondern dass ihre Wirksamkeit stark von den 
-institutionellen Gegebenheiten abhängt. Besonders in Ländern mit ineffizienten 
-Arbeitsmarktstrukturen und fehlenden Anpassungsmaßnahmen sind Reformen notwendig, um 
-die Vorteile der Digitalisierung optimal zu nutzen.
+Arbeitsmärkte auswirkt. Besonders in Ländern mit weniger flexiblen Arbeitsmärkten 
+(z. B. Südeuropa, Postsozialistische Staaten) sind signifikante Herausforderungen erkennbar.

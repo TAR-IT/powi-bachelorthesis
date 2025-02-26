@@ -29,7 +29,7 @@ Diese Bachelorarbeit untersucht den Zusammenhang zwischen **Investitionen in Inf
 
 #### **Datenquellen**
 
-- **OECD-Paneldaten** zu 18 OECD-Ländern von 2005–2022 (Arbeitslosenquoten, ICT-Investitionen, BIP, Gewerkschaftsdichte)
+- **OECD-Paneldaten** zu 18 OECD-Ländern von 2005–2022 (Arbeitslosenquoten, ICT-Investitionen, BIP, Gewerkschaftsdichte, Tertiärer Bildungsanteil, Arbeitsmarktregulierung)
 
 ## Projektstruktur
 

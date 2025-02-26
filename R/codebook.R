@@ -142,7 +142,8 @@ selected_countries <- c(
 # Liste aller Variablen für die Analyse
 variables <- c(
   "UNEMPLOYMENT_RATE_PERCENT", "ICT_INVEST_SHARE_GDP",
-  "GDP_PER_CAPITA", "PERCENT_EMPLOYEES_TUD"
+  "GDP_PER_CAPITA", "PERCENT_EMPLOYEES_TUD",
+  "PERCENT_TERTIARY_EDUCATION", "REGULATION_STRICTNESS"
 )
 
 #############################################
@@ -222,6 +223,38 @@ data_gdp <- read.table(
   ) %>%
   select(REFERENCE_AREA, YEAR_OF_OBSERVATION, GDP_PER_CAPITA)
 
+# OECD-Datensatz zu Percentage of Tertiary Education
+data_pte <- read.table(
+  "data/OEDC_Adults-educational-attainment-distribution.csv",
+  header = TRUE, sep = ",", dec = ".", fileEncoding = "UTF-8"
+) %>%
+  filter(
+    Reference.area %in% selected_countries,
+    TIME_PERIOD >= 2005 & TIME_PERIOD <= 2022
+  ) %>%
+  mutate(
+    REFERENCE_AREA = as.character(Reference.area),
+    YEAR_OF_OBSERVATION = as.integer(TIME_PERIOD),
+    PERCENT_TERTIARY_EDUCATION = OBS_VALUE
+  ) %>%
+  select(REFERENCE_AREA, YEAR_OF_OBSERVATION, PERCENT_TERTIARY_EDUCATION)
+
+# OECD-Datensatz zu Regulation Strictness
+data_reg <- read.table(
+  "data/OECD_Strictness-of-employment-protection.csv",
+  header = TRUE, sep = ",", dec = ".", fileEncoding = "UTF-8"
+) %>%
+  filter(
+    Reference.area %in% selected_countries,
+    TIME_PERIOD >= 2005 & TIME_PERIOD <= 2022
+  ) %>%
+  mutate(
+    REFERENCE_AREA = as.character(Reference.area),
+    YEAR_OF_OBSERVATION = as.integer(TIME_PERIOD),
+    REGULATION_STRICTNESS = OBS_VALUE
+  ) %>%
+  select(REFERENCE_AREA, YEAR_OF_OBSERVATION, REGULATION_STRICTNESS)
+
 # OECD-Datensatz zu Trade Union Density
 data_tud <- read.table(
   "data/OECD_trade_union_density.csv",
@@ -246,22 +279,24 @@ data_tud <- read.table(
 merged_data <- data_ictinvest %>%
   left_join(data_unemp, by = c("REFERENCE_AREA", "YEAR_OF_OBSERVATION")) %>%
   left_join(data_gdp, by = c("REFERENCE_AREA", "YEAR_OF_OBSERVATION")) %>%
+  left_join(data_pte, by = c("REFERENCE_AREA", "YEAR_OF_OBSERVATION")) %>%
+  left_join(data_reg, by = c("REFERENCE_AREA", "YEAR_OF_OBSERVATION")) %>%
   left_join(data_tud, by = c("REFERENCE_AREA", "YEAR_OF_OBSERVATION")) %>%
   group_by(REFERENCE_AREA) %>%
   arrange(YEAR_OF_OBSERVATION) %>%  # Sortierung für Interpolation
-  mutate(PERCENT_EMPLOYEES_TUD = na.approx(
-                                           as.numeric(PERCENT_EMPLOYEES_TUD),
-                                           na.rm = FALSE, rule = 2)) %>%
+  mutate(
+    PERCENT_EMPLOYEES_TUD = na.approx(as.numeric(PERCENT_EMPLOYEES_TUD), na.rm = FALSE, rule = 2),
+    PERCENT_TERTIARY_EDUCATION = na.approx(as.numeric(PERCENT_TERTIARY_EDUCATION), na.rm = FALSE, rule = 2),
+    REGULATION_STRICTNESS = na.approx(as.numeric(REGULATION_STRICTNESS), na.rm = FALSE, rule = 2)
+  ) %>%
   ungroup() %>%  # Entgruppierung wegen Interpolation
   mutate(
     SUBJECT = recode(
-                     SUBJECT,
-                     "Below upper secondary" =
-                       "niedriges Bildungsniveau",
-                     "Upper secondary, non-tertiary" =
-                       "mittleres Bildungsniveau",
-                     "Tertiary" =
-                       "hohes Bildungsniveau"),
+      SUBJECT,
+      "Below upper secondary" = "niedriges Bildungsniveau",
+      "Upper secondary, non-tertiary" = "mittleres Bildungsniveau",
+      "Tertiary" = "hohes Bildungsniveau"
+    ),
     # Dummy-Variable für Jahresfixeffekte
     YEAR_FACTOR = relevel(factor(YEAR_OF_OBSERVATION), ref = "2005")
   )
@@ -272,7 +307,7 @@ merged_data <- data_ictinvest %>%
 
 # Beschreibung der Variablen
 described_variables <- describe_variables(merged_data, variables)
-welfare_state_summary <- describe_categorical_variable(merged_data, "WELFARE_STATE")
+described_welfarestates <- describe_categorical_variable(merged_data, "WELFARE_STATE")
 
 # Ergebnisse anzeigen und speichern
 print(described_variables)
@@ -287,9 +322,9 @@ writeLines(
 )
 
 # Erstelle die Tabelle für WELFARE_STATE
-print(welfare_state_summary)
+print(described_welfarestates)
 writeLines(
-  kable(welfare_state_summary,
+  kable(described_welfarestates,
         format = "latex",
         booktabs = TRUE,
         caption = "Übersicht über die Verteilung der Wohlfahrtsstaatentypen"
@@ -352,6 +387,8 @@ model_low_fe_control    <- plm(
   UNEMPLOYMENT_RATE_PERCENT ~ ICT_INVEST_SHARE_GDP +
     YEAR_FACTOR +
     GDP_PER_CAPITA +
+    PERCENT_TERTIARY_EDUCATION +
+    REGULATION_STRICTNESS +
     PERCENT_EMPLOYEES_TUD,
   data = filter_data_low,
   model = "within",
@@ -362,6 +399,8 @@ model_medium_fe_control <- plm(
   UNEMPLOYMENT_RATE_PERCENT ~ ICT_INVEST_SHARE_GDP +
     YEAR_FACTOR +
     GDP_PER_CAPITA +
+    PERCENT_TERTIARY_EDUCATION +
+    REGULATION_STRICTNESS +
     PERCENT_EMPLOYEES_TUD,
   data = filter_data_medium,
   model = "within",
@@ -372,6 +411,8 @@ model_high_fe_control   <- plm(
   UNEMPLOYMENT_RATE_PERCENT ~ ICT_INVEST_SHARE_GDP +
     YEAR_FACTOR +
     GDP_PER_CAPITA +
+    PERCENT_TERTIARY_EDUCATION +
+    REGULATION_STRICTNESS +
     PERCENT_EMPLOYEES_TUD,
   data = filter_data_high,
   model = "within",
@@ -386,6 +427,8 @@ model_low_fe_interaction    <- plm(
   UNEMPLOYMENT_RATE_PERCENT ~ ICT_INVEST_SHARE_GDP * WELFARE_STATE +
     YEAR_FACTOR +
     GDP_PER_CAPITA +
+    PERCENT_TERTIARY_EDUCATION +
+    REGULATION_STRICTNESS +
     PERCENT_EMPLOYEES_TUD,
   data = filter_data_low, model = "within",
   index = c("REFERENCE_AREA")
@@ -395,6 +438,8 @@ model_medium_fe_interaction <- plm(
   UNEMPLOYMENT_RATE_PERCENT ~ ICT_INVEST_SHARE_GDP * WELFARE_STATE +
     YEAR_FACTOR +
     GDP_PER_CAPITA +
+    PERCENT_TERTIARY_EDUCATION +
+    REGULATION_STRICTNESS +
     PERCENT_EMPLOYEES_TUD,
   data = filter_data_medium, model = "within",
   index = c("REFERENCE_AREA")
@@ -404,6 +449,8 @@ model_high_fe_interaction   <- plm(
   UNEMPLOYMENT_RATE_PERCENT ~ ICT_INVEST_SHARE_GDP * WELFARE_STATE +
     YEAR_FACTOR +
     GDP_PER_CAPITA +
+    PERCENT_TERTIARY_EDUCATION +
+    REGULATION_STRICTNESS +
     PERCENT_EMPLOYEES_TUD,
   data = filter_data_high, model = "within",
   index = c("REFERENCE_AREA")

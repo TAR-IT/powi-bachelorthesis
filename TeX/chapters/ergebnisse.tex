@@ -72,7 +72,8 @@ Ländern. Während einige nordische Länder traditionell hohe Gewerkschaftsdicht
 sind Gewerkschaften in anderen \ac{OECD}-Staaten weniger stark in den Arbeitsmarkt 
 integriert. Dies könnte Implikationen für die Verhandlungsmacht von Arbeitnehmern haben, 
 was sich wiederum auf Lohnstrukturen und Beschäftigungssicherheit auswirken kann.  
-Zur Sicherstellung einer vollständigen Zeitreihe wurden fehlende Werte dieser Variable mittels linearer Interpolation ergänzt.
+Zur Sicherstellung einer vollständigen Zeitreihe wurden fehlende Werte dieser Variable 
+mittels linearer Interpolation ergänzt.
 
 % Deskriptive Statistik: Variable "Arbeitsmarktregulierung"
 Die Variable \textit{Regulierungsstrenge des Arbeitsmarkts} (REGULATION\_STRICTNESS) misst, 
@@ -86,8 +87,8 @@ Schaffung neuer Arbeitsplätze hemmen.
 % Deskriptive Statistik: Variable "Anteil tertiär Gebildeter"
 Die Variable \textit{Anteil tertiär gebildeter Personen} (PERCENT\_TERTIARY\_EDUCATION) gibt 
 den Prozentsatz der Bevölkerung an, der einen tertiären Bildungsabschluss besitzt 
-\parencite{oecd2022education}. Der Wert variiert zwischen 12,22\% und 61,99\%, mit einem 
-Mittelwert von 33,69\% und einer Standardabweichung von 9,29. Länder mit höheren Werten 
+\parencite{oecd2022education}. Der Wert variiert zwischen 12,87\% und 59,96\%, mit einem 
+Mittelwert von 33,65\% und einer Standardabweichung von 9,27. Länder mit höheren Werten 
 verfügen tendenziell über eine stärker wissensbasierte Wirtschaft, was sich positiv auf die 
 Integration von Arbeitnehmern in technologische Sektoren auswirken kann. Gleichzeitig könnte 
 eine höhere Bildungsbeteiligung dazu beitragen, die negativen Effekte der Digitalisierung für 
@@ -538,103 +539,101 @@ und institutioneller Strukturen, während der direkte Einfluss von
 
 % Multivariate Analyse: Modell ohne Interaktion (niedriges Bildungsniveau)
 Im Modell für die Gruppe mit niedrigem Bildungsniveau zeigt der geschätzte Koeffizient 
-für \textit{\ac{ICT}-Investitionen} einen positiven Wert von 2.371*** (p < 0.001), was auf 
+für \textit{\ac{ICT}-Investitionen} einen positiven Wert von 2,302*** (p < 0,001), was auf 
 einen signifikanten positiven Zusammenhang zwischen \ac{ICT}-Investitionen und der 
-Arbeitslosenquote dieser Gruppe hindeutet. Dies deutet darauf hin, dass in Ländern mit 
+Arbeitslosenquote dieser Gruppe hindeutet. Dies bedeutet, dass in Ländern mit 
 höheren \ac{ICT}-Investitionen die Arbeitslosigkeit unter geringqualifizierten Personen 
 tendenziell ansteigt.
 
-Das \textit{\ac{BIP} pro Kopf} zeigt mit einem Koeffizienten von -0.193*** (p < 0.001) 
+Das \textit{\ac{BIP} pro Kopf} zeigt mit einem Koeffizienten von -0,194*** (p < 0,001) 
 einen stark negativen und signifikanten Einfluss. Dies weist darauf hin, dass in wohlhabenderen 
 Ländern die Arbeitslosenquote für geringqualifizierte Personen tendenziell niedriger ist, 
 möglicherweise aufgrund eines breiteren Angebots an Beschäftigungsmöglichkeiten oder 
 arbeitsmarktpolitischer Maßnahmen.
 
-Die \textit{Gewerkschaftsdichte} weist mit einem Koeffizienten von 0.127** (p < 0.01) einen 
+Der \textit{Anteil tertiär gebildeter Personen} hat einen signifikanten positiven Effekt von 0,606** 
+(p < 0,01), was darauf hindeutet, dass eine höhere Bildungsbeteiligung in der Gesamtbevölkerung 
+zu strukturellen Veränderungen des Arbeitsmarktes führt, die auch auf geringqualifizierte Arbeitskräfte 
+Auswirkungen haben könnten.
+
+Die \textit{Gewerkschaftsdichte} weist mit einem Koeffizienten von 0,128** (p < 0,01) einen 
 signifikanten positiven Zusammenhang auf, was darauf hindeutet, dass eine höhere 
 gewerkschaftliche Organisationsrate mit einer leicht höheren Arbeitslosenquote für diese Gruppe 
 einhergeht.
 
-Die \textit{Regulierungsstrenge des Arbeitsmarkts} zeigt einen positiven Koeffizienten von 0.089* 
-(p < 0.05), was darauf hindeutet, dass strengere Arbeitsmarktregulierungen mit höheren 
-Arbeitslosenquoten für geringqualifizierte Personen einhergehen können.
-
-Der \textit{Anteil tertiär gebildeter Personen} hat einen signifikant negativen Effekt von -0.134** 
-(p < 0.01), was darauf hinweist, dass eine höhere Bildungsbeteiligung die negativen Effekte von 
-\ac{ICT}-Investitionen auf geringqualifizierte Arbeitskräfte abschwächen könnte.
+Die \textit{Regulierungsstrenge des Arbeitsmarkts} zeigt keinen signifikanten Effekt für diese Gruppe.
 
 % Multivariate Analyse: Modell ohne Interaktion (mittleres Bildungsniveau)
 Für das mittlere Bildungsniveau ergibt sich ebenfalls ein signifikanter positiver Zusammenhang 
 zwischen \textit{\ac{ICT}-Investitionen} und Arbeitslosigkeit. Der geschätzte Koeffizient beträgt 
-1.225*** (p < 0.001), was darauf hindeutet, dass höhere \ac{ICT}-Investitionen mit einer steigenden 
+1,157*** (p < 0,001), was darauf hindeutet, dass höhere \ac{ICT}-Investitionen mit einer steigenden 
 Arbeitslosigkeit in dieser Gruppe verbunden sind.
 
-Das \textit{\ac{BIP} pro Kopf} zeigt mit einem Koeffizienten von -0.150*** (p < 0.001) einen 
+Das \textit{\ac{BIP} pro Kopf} zeigt mit einem Koeffizienten von -0,153*** (p < 0,001) einen 
 signifikanten negativen Zusammenhang. Dies deutet darauf hin, dass eine höhere 
 Wirtschaftsleistung mit einer geringeren Arbeitslosenquote für mittelqualifizierte Personen 
 verbunden ist.
 
-Die \textit{Gewerkschaftsdichte} zeigt mit einem Koeffizienten von 0.107*** (p < 0.001) eine 
+Der \textit{Anteil tertiär gebildeter Personen} weist einen signifikanten positiven Effekt von 0,282** 
+(p < 0,01) auf, was darauf hindeutet, dass eine höhere tertiäre Bildungsbeteiligung mit strukturellen 
+Arbeitsmarktveränderungen einhergeht.
+
+Die \textit{Gewerkschaftsdichte} zeigt mit einem Koeffizienten von 0,106*** (p < 0,001) eine 
 signifikante positive Korrelation mit der Arbeitslosenquote.
 
-Die \textit{Regulierungsstrenge des Arbeitsmarkts} hat einen leicht positiven, aber nicht signifikanten 
-Effekt von 0.043, was darauf hindeutet, dass in dieser Bildungsgruppe keine klare Verbindung zwischen 
-Arbeitsmarktregulierung und Arbeitslosigkeit besteht.
-
-Der \textit{Anteil tertiär gebildeter Personen} weist einen signifikanten negativen Effekt von -0.128** 
-(p < 0.01) auf, was darauf hinweist, dass eine höhere Bildungsbeteiligung die negativen Auswirkungen 
-der Digitalisierung auf mittelqualifizierte Arbeitnehmer abmildern kann.
+Die \textit{Regulierungsstrenge des Arbeitsmarkts} hat einen signifikant negativen Effekt von -0,118* 
+(p < 0,05), was darauf hindeutet, dass strengere Arbeitsmarktregulierungen für diese Gruppe 
+stabilisierend wirken könnten.
 
 % Multivariate Analyse: Modell ohne Interaktion (hohes Bildungsniveau)
 Für das hohe Bildungsniveau zeigt das Modell einen signifikanten, aber kleineren positiven 
 Zusammenhang zwischen \textit{\ac{ICT}-Investitionen} und Arbeitslosigkeit. Der Koeffizient beträgt 
-0.477*** (p < 0.001), was darauf hindeutet, dass auch hochqualifizierte Personen in Ländern mit 
+0,455*** (p < 0,001), was darauf hindeutet, dass auch hochqualifizierte Personen in Ländern mit 
 höheren \ac{ICT}-Investitionen von einem leichten Anstieg der Arbeitslosenquote betroffen sein 
 könnten.
 
-Das \textit{\ac{BIP} pro Kopf} zeigt mit einem Koeffizienten von -0.083*** (p < 0.001) weiterhin 
+Das \textit{\ac{BIP} pro Kopf} zeigt mit einem Koeffizienten von -0,083*** (p < 0,001) weiterhin 
 einen signifikant negativen Zusammenhang.
 
-Die \textit{Gewerkschaftsdichte} hat in dieser Gruppe mit 0.026+ (p < 0.1) einen nur schwach 
+Der \textit{Anteil tertiär gebildeter Personen} hat mit 0.140*** (p < 0,001) ebenfalls einen 
+signifikant positiven Zusammenhang.
+
+Die \textit{Gewerkschaftsdichte} hat in dieser Gruppe mit 0.025+ (p < 0,1) einen nur schwach 
 signifikanten positiven Effekt.
 
-Die \textit{Regulierungsstrenge des Arbeitsmarkts} zeigt mit einem Koeffizienten von -0.067* 
-(p < 0.05) einen signifikant negativen Zusammenhang, was darauf hindeutet, dass striktere 
+Die \textit{Regulierungsstrenge des Arbeitsmarkts} zeigt mit einem Koeffizienten von -0,085* 
+(p < 0,05) einen signifikant negativen Zusammenhang, was darauf hindeutet, dass striktere 
 Arbeitsmarktregulierungen möglicherweise schützend für hochqualifizierte Arbeitnehmer wirken.
-
-Der \textit{Anteil tertiär gebildeter Personen} hat mit -0.075* (p < 0.05) ebenfalls einen 
-signifikant negativen Zusammenhang, was darauf hinweist, dass eine höhere Bildungsbeteiligung 
-langfristig dazu beitragen kann, negative Arbeitsmarkteffekte der Digitalisierung für 
-Hochqualifizierte abzufedern.
 
 % Modellgüte und Interpretation der Ergebnisse
 Die Modellgüte variiert zwischen den Bildungsgruppen, wobei die erklärten Varianzen (R²-Werte) 
-relativ hoch sind. Im Modell für das niedrige Bildungsniveau beträgt der R²-Wert 0.321, für das 
-mittlere Bildungsniveau 0.314 und für das hohe Bildungsniveau 0.289. Diese Werte zeigen, dass die 
+relativ hoch sind. Im Modell für das niedrige Bildungsniveau beträgt der R²-Wert 0,304, für das 
+mittlere Bildungsniveau 0,308 und für das hohe Bildungsniveau 0,272. Diese Werte zeigen, dass die 
 Modelle einen relevanten Teil der Variation in der Arbeitslosenquote erklären können.
 
-Der adjustierte R²-Wert liegt bei 0.312 (niedriges Bildungsniveau), 0.308 (mittleres 
-Bildungsniveau) und 0.281 (hohes Bildungsniveau). Diese Werte zeigen, dass die Modelle stabil sind, 
+Der adjustierte R²-Wert liegt bei 0,295 (niedriges Bildungsniveau), 0,299 (mittleres 
+Bildungsniveau) und 0,262 (hohes Bildungsniveau). Diese Werte zeigen, dass die Modelle stabil sind, 
 aber weiterhin zusätzliche Erklärungsfaktoren notwendig wären.
 
 % Fazit der multivariaten Analyse ohne Interaktion
 Zusammenfassend zeigen die Modelle mit Kontrollvariablen, dass \textit{\ac{ICT}-Investitionen} 
 in allen Bildungsgruppen einen signifikanten positiven Einfluss auf die Arbeitslosenquote haben. 
-Die geschätzten Koeffizienten sind durchweg signifikant (niedriges Bildungsniveau: 2.371***, 
-mittleres Bildungsniveau: 1.225***, hohes Bildungsniveau: 0.477***), was darauf hindeutet, dass 
+Die geschätzten Koeffizienten sind durchweg signifikant (niedriges Bildungsniveau: 2,302***, 
+mittleres Bildungsniveau: 1,157***, hohes Bildungsniveau: 0,455***), was darauf hindeutet, dass 
 \ac{ICT}-Investitionen in der derzeitigen Form eher zu einem Anstieg der Arbeitslosigkeit führen.
 
 Makroökonomische Faktoren, insbesondere das \textit{\ac{BIP} pro Kopf}, haben in allen Modellen 
 einen signifikanten negativen Einfluss auf die Arbeitslosenquote. Striktere Arbeitsmarktregulierungen  
-zeigen in der Gruppe der Geringqualifizierten tendenziell negative Effekte auf die Beschäftigung, 
-während sie bei Hochqualifizierten möglicherweise stabilisierend wirken. Eine höhere 
-**Bildungsbeteiligung** reduziert in allen Gruppen die negativen Auswirkungen der Digitalisierung.
+zeigen in der Gruppe der Mittel- und Hochqualifizierten negative Effekte auf die Arbeitslosigkeit, 
+was darauf hindeutet, dass Regulierung möglicherweise Schutz für diese Gruppen bietet. Eine höhere 
+Bildungsbeteiligung zeigt in allen Gruppen einen positiven Zusammenhang mit der Arbeitslosenquote, 
+was darauf hindeutet, dass eine verstärkte Tertiärbildung allein nicht ausreicht, um 
+Digitalisierungseffekte am Arbeitsmarkt auszugleichen.
 
-Die Erklärungswerte (R²) der Modelle sind moderat bis hoch (zwischen 0.289 und 0.321), was darauf 
+Die Erklärungswerte (R²) der Modelle sind moderat bis hoch (zwischen 0,272 und 0,308), was darauf 
 hindeutet, dass wesentliche strukturelle und institutionelle Einflussfaktoren erfasst wurden. Dies 
 zeigt die Notwendigkeit einer differenzierteren Untersuchung durch Interaktionsmodelle, um die 
 Mechanismen hinter den beobachteten Zusammenhängen besser zu verstehen.
-
 
 % Multivariate Analyse: Modelle mit Interaktion
 \input{assets/models_interaction_fin.tex}
@@ -648,10 +647,10 @@ Zusammenhänge, insbesondere mit institutionellen Faktoren wie dem Wohlfahrtssta
 % Haupteffekte von ICT-Investitionen
 Der geschätzte Haupteffekt von \textit{\ac{ICT}-Investitionen} ist in allen drei 
 Bildungsgruppen positiv und signifikant. Für das niedrige Bildungsniveau zeigt sich mit einem 
-Koeffizienten von +3.211*** (p < 0.001) ein deutlicher Anstieg der Arbeitslosenquote bei 
+Koeffizienten von 4,671* (p < 0,001) ein deutlicher Anstieg der Arbeitslosenquote bei 
 höheren ICT-Investitionen. Auch für das mittlere Bildungsniveau ist der Effekt mit 
-+2.498*** (p < 0.001) signifikant positiv. Beim hohen Bildungsniveau ist der Effekt mit 
-+1.012** (p < 0.05) zwar schwächer ausgeprägt, aber weiterhin signifikant.
+3,246* (p < 0,001) signifikant positiv. Beim hohen Bildungsniveau ist der Effekt mit 
+1,259* (p < 0,001) zwar schwächer ausgeprägt, aber weiterhin signifikant.
 
 Diese Ergebnisse deuten darauf hin, dass höhere ICT-Investitionen in angelsächsischen 
 Wohlfahrtsstaaten (Referenzkategorie) mit einer höheren Arbeitslosenquote in allen 
@@ -670,10 +669,10 @@ die Interaktionseffekte relativ zu diesem Typ interpretiert werden müssen.
 \begin{itemize}
     \item \textbf{Postsozialistische Wohlfahrtsstaaten:} Hier zeigen sich 
     die stärksten negativen Effekte. Für das niedrige Bildungsniveau beträgt der 
-    Interaktionseffekt -4.103** (p < 0.01), für das mittlere Bildungsniveau -2.756** (p < 0.01) und 
-    für das hohe Bildungsniveau -1.113* (p < 0.05). Diese signifikant negativen Werte 
-    deuten darauf hin, dass ICT-Investitionen in diesen Ländern keine positiven Effekte 
-    auf die Arbeitsmarktsituation haben, sondern möglicherweise bestehende 
+    Interaktionseffekt -5,200* (p < 0,001), für das mittlere Bildungsniveau -3,579* 
+    (p < 0,001) und für das hohe Bildungsniveau -1,415* (p < 0,001). Diese signifikant 
+    negativen Werte deuten darauf hin, dass ICT-Investitionen in diesen Ländern keine positiven 
+    Effekte auf die Arbeitsmarktsituation haben, sondern möglicherweise bestehende 
     strukturelle Schwächen verschärfen. Eine mögliche Erklärung hierfür ist, dass die 
     Digitalisierung in diesen Ländern schneller voranschreitet als die institutionellen 
     Anpassungen im Bildungssystem und am Arbeitsmarkt.
@@ -685,17 +684,18 @@ die Interaktionseffekte relativ zu diesem Typ interpretiert werden müssen.
     duale Bildungssysteme und relativ stabile Arbeitsmarktstrukturen, die mögliche 
     negative Effekte von ICT-Investitionen abmildern könnten.
     
-    \item \textbf{Nordische Wohlfahrtsstaaten:} Hier zeigen sich ebenfalls keine signifikanten 
-    Interaktionseffekte. Die Ergebnisse deuten darauf hin, dass nordische Länder besser 
-    auf die digitale Transformation vorbereitet sind und ICT-Investitionen nicht mit 
-    steigender Arbeitslosigkeit verbunden sind.
+    \item \textbf{Nordische Wohlfahrtsstaaten:} Der Interaktionseffekt ist im niedrigen und mittleren 
+    Bildungsniveau nicht signifikant, während er für das hohe Bildungsniveau mit 0,639 (p < 0,05) 
+    signifikant positiv ist. Dies deutet darauf hin, dass in nordischen Ländern hochqualifizierte 
+    Arbeitskräfte möglicherweise stärker von der Digitalisierung betroffen sind als in anderen 
+    Wohlfahrtsstaatentypen.
     
-    \item \textbf{Südeuropäische Wohlfahrtsstaaten:} Für das niedrige und mittlere Bildungsniveau 
-    sind die Interaktionseffekte nicht signifikant. Im hohen Bildungsniveau ist der 
-    Interaktionseffekt jedoch -2.412** (p < 0.01) und damit stark negativ. Dies deutet 
-    darauf hin, dass selbst hochqualifizierte Arbeitskräfte in diesen Ländern durch 
-    strukturelle Arbeitsmarktprobleme benachteiligt sind und ICT-Investitionen hier eher 
-    bestehende Ungleichheiten verstärken, anstatt sie zu verringern.
+    \item \textbf{Südeuropäische Wohlfahrtsstaaten:} Für das mittlere und hohe Bildungsniveau sind die 
+    Interaktionseffekte signifikant negativ. Im mittleren Bildungsniveau beträgt der Effekt 
+    -3,066* (p < 0,001) und im hohen Bildungsniveau -2,880* (p < 0,001). Dies deutet darauf hin, 
+    dass hochqualifizierte Arbeitskräfte in diesen Ländern durch strukturelle Arbeitsmarktprobleme 
+    benachteiligt sind und ICT-Investitionen hier eher bestehende Ungleichheiten verstärken, anstatt 
+    sie zu verringern.
 \end{itemize}
 
 % Effekte der Kontrollvariablen
@@ -703,37 +703,36 @@ Die zusätzlichen Kontrollvariablen liefern weitere wichtige Erkenntnisse:
 
 \begin{itemize}
     \item \textbf{BIP pro Kopf:} In allen Bildungsgruppen zeigt sich ein signifikanter negativer 
-    Zusammenhang 
-    zwischen BIP pro Kopf und Arbeitslosenquote. Dies bestätigt, dass wirtschaftlich stärkere Länder 
-    niedrigere Arbeitslosenquoten aufweisen, unabhängig von der Wohlfahrtsstaatenklassifikation.
+    Zusammenhang zwischen BIP pro Kopf und Arbeitslosenquote (p < 0,001). Dies bestätigt, dass 
+    wirtschaftlich stärkere Länder niedrigere Arbeitslosenquoten aufweisen, unabhängig von der 
+    Wohlfahrtsstaatenklassifikation.
     
-    \item \textbf{Gewerkschaftsdichte:} Die Gewerkschaftsdichte hat in allen Bildungsgruppen einen 
-    positiven, signifikanten Effekt auf die Arbeitslosenquote. Dies deutet darauf hin, dass stärkere 
-    Gewerkschaften die Arbeitsmarktdynamik beeinflussen können, indem sie Kündigungsschutz und 
-    Lohnverhandlungen beeinflussen.
+    \item \textbf{Gewerkschaftsdichte:} Die Gewerkschaftsdichte hat in den Gruppen mit niedrigem und 
+    mittlerem Bildungsniveau einen positiven, signifikanten Effekt auf die Arbeitslosenquote. Dies 
+    deutet darauf hin, dass stärkere Gewerkschaften die Arbeitsmarktdynamik beeinflussen können, indem 
+    sie Kündigungsschutz und Lohnverhandlungen beeinflussen.
     
     \item \textbf{Regulierungsstrenge des Arbeitsmarkts:} Der Koeffizient für die Arbeitsmarktregulierung 
-    ist für das niedrige und mittlere Bildungsniveau positiv, aber nur für das niedrige 
-    Bildungsniveau signifikant (0.093*, p < 0.05). Dies deutet darauf hin, dass strengere 
-    Arbeitsmarktregulierungen in einigen Ländern die Arbeitslosigkeit für geringqualifizierte 
-    Arbeitnehmer erhöhen können.  Beim hohen Bildungsniveau ist der Effekt negativ 
-    (-0.058*, p < 0.05), was darauf hinweist, dass Hochqualifizierte in stark regulierten 
-    Arbeitsmärkten besser geschützt sein könnten.
+    ist für das niedrige und mittlere Bildungsniveau negativ, jedoch nur für das niedrige Bildungsniveau 
+    signifikant (p < 0,1). Dies deutet darauf hin, dass strengere Arbeitsmarktregulierungen in einigen 
+    Ländern die Arbeitslosigkeit für geringqualifizierte Arbeitnehmer erhöhen können. Beim hohen 
+    Bildungsniveau ist der Effekt mit -0,091 (p < 0,01) ebenfalls signifikant negativ, was darauf 
+    hinweist, dass Hochqualifizierte in stark regulierten Arbeitsmärkten besser geschützt sein könnten.
     
     \item \textbf{Anteil tertiär gebildeter Personen:} Der Koeffizient für den Anteil tertiär gebildeter 
-    Personen ist in allen Gruppen negativ und signifikant, was darauf hindeutet, dass eine höhere 
-    Bildungsbeteiligung negative Beschäftigungseffekte der Digitalisierung abmildern kann.
+    Personen ist in allen Gruppen negativ und signifikant (p < 0,01), was darauf hindeutet, dass eine 
+    höhere Bildungsbeteiligung negative Beschäftigungseffekte der Digitalisierung abmildern kann.
 \end{itemize}
 
 % Modellgüte und Vergleich mit den Basis-Modellen
 Die erklärten Varianzen (R²-Werte) sind in den Interaktionsmodellen höher als in 
 den Basis-Modellen ohne Interaktionen. Während die R²-Werte in den einfachen Modellen 
-zwischen 0.289 und 0.321 lagen, erreichen die Interaktionsmodelle Werte von 0.343 
-(niedriges Bildungsniveau), 0.358 (mittleres Bildungsniveau) und 0.319 (hohes Bildungsniveau). 
+zwischen 0,289 und 0,321 lagen, erreichen die Interaktionsmodelle Werte von 0,337 
+(niedriges Bildungsniveau), 0,333 (mittleres Bildungsniveau) und 0,306 (hohes Bildungsniveau). 
 Dies zeigt, dass institutionelle Rahmenbedingungen eine wesentliche Rolle spielen und die 
 Erklärungskraft der Modelle erheblich verbessern.
 
-Der adjustierte R²-Wert bleibt mit 0.262–0.276 weiterhin moderat, aber deutlich höher als 
+Der adjustierte R²-Wert bleibt mit 0,327–0,297 weiterhin moderat, aber deutlich höher als 
 in den Kontrollmodellen. Dies unterstreicht, dass die reine Betrachtung von ICT-Investitionen 
 ohne Berücksichtigung institutioneller Faktoren keine adäquate Erklärung für Unterschiede in 
 den Arbeitslosenquoten liefert.

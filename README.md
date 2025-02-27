@@ -6,7 +6,7 @@
 **Fachbereich:** Fachbereich 03 – Geisteswissenschaften\
 **Studiengang:** Politikwissenschaften B.A. (Nebenfach Soziologie)\
 **Abgabedatum:** 25.03.2025\
-**Projektarchivierung:** [GitHub Repository](https://github.com/TAR-IT/bachelorthesis)
+**Projektarchivierung:** [GitHub Repository](https://github.com/TAR-IT/powi-bachelorthesis)
 
 ---
 ---

@@ -225,7 +225,7 @@ data_gdp <- read.table(
 
 # OECD-Datensatz zu Percentage of Tertiary Education
 data_pte <- read.table(
-  "data/OEDC_adults-educational-attainment-distribution.csv",
+  "data/OEDC_adults-educational-attainment-distribution_2000-2022.csv",
   header = TRUE, sep = ";", dec = ",", fileEncoding = "UTF-8"
 ) %>%
   filter(
@@ -241,7 +241,7 @@ data_pte <- read.table(
 
 # OECD-Datensatz zu Regulation Strictness
 data_reg <- read.table(
-  "data/OECD_strictness-of-employment-protection.csv",
+  "data/OECD_strictness-of-employment-protection_2000-2022.csv",
   header = TRUE, sep = ";", dec = ",", fileEncoding = "UTF-8"
 ) %>%
   filter(
@@ -257,7 +257,7 @@ data_reg <- read.table(
 
 # OECD-Datensatz zu Trade Union Density
 data_tud <- read.table(
-  "data/OECD_trade_union_density.csv",
+  "data/OECD_trade_union_density_2000-2022.csv",
   header = TRUE, sep = ";", dec = ",", fileEncoding = "UTF-8"
 ) %>%
   filter(

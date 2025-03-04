@@ -1,3 +1,5 @@
+<!-- TODO: - (Stand 04.03.2025) -->
+
 # Bachelorarbeit – Politikwissenschaften B.A.
 **Titel:** Der Einfluss von ICT-Investitionen auf die Arbeitslosigkeit in verschiedenen Bildungsgruppen in OECD-Ländern\
 **Autor:** Tobias A. Rau\

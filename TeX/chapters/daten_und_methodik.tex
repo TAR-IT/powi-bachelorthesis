@@ -23,9 +23,9 @@ zu erhöhen. Dazu gehören das \ac{BIP} pro Kopf \parencite{oecd2022gdp}, die Ge
 \parencite{oecd2022education} sowie der Grad der Regulierung des Arbeitnehmerschutzes 
 \parencite{oecd2022regulation}. Zudem wird die Wohlfahrtsstaatentypologie nach Esping-Andersen 
 \parencite{espingandersen1990thethree} genutzt, um institutionelle Unterschiede zwischen den 
-Ländern zu erfassen.
-
-Die finalen Daten umfassen insgesamt 35 OECD- und ausgewählte Nicht-OECD-Länder
+Ländern zu erfassen. Die Wohlfahrtsstaaten-Variable wird separat betrachtet, da sie nicht
+nur eine Kontrollvariable darstellt, sondern auch eine eigene Hypothese in der Analyse testet. 
+Die finalen Daten umfassen insgesamt 35 OECD- und ausgewählte Nicht-OECD-Länder 
 \footnote{Untersuchte Länder: Australien, Österreich, Belgien, Bulgarien, Brasilien, 
 Kanada, Kroatien, Tschechien, Dänemark, Estland, Finnland, Frankreich, Deutschland, 
 Griechenland, Ungarn, Island, Italien, Irland, Lettland, Litauen, Luxemburg, Niederlande, 
@@ -41,7 +41,8 @@ Informationen über die Arbeitslosenquoten in verschiedenen Bildungsgruppen
 tertiär gebildeter Personen und die Regulierungsstrenge des Arbeitsmarkts wird sichergestellt, 
 dass sowohl wirtschaftliche als auch institutionelle Unterschiede in den Ländern angemessen 
 berücksichtigt werden. Zur Sicherstellung einer vollständigen Zeitreihe wurden fehlende Werte 
-der Variable `PERCENT\_EMPLOYEES\_TUD` mittels linearer Interpolation ergänzt.  
+der Variable `PERCENT\_EMPLOYEES\_TUD` mittels linearer Interpolation ergänzt. Zudem wurde
+das \ac{BIP} pro Kopf zur besseren Interpretierbarkeit durch 1000 geteilt.
 
 Die längsschnittliche Struktur der Daten ermöglicht es, sowohl kurzfristige als auch 
 langfristige Entwicklungen zu analysieren und Zusammenhänge zwischen ICT-Investitionen und 
@@ -92,6 +93,7 @@ durch andere Faktoren verzerrt wird, werden mehrere Kontrollvariablen in die Ana
     Wohlstand eines Landes in tausend US-Dollar pro Jahr und kontrolliert den Entwicklungsstand 
     eines Landes, da wirtschaftlich wohlhabendere Länder tendenziell niedrigere Arbeitslosenquoten 
     aufweisen \parencite{oecd2022gdp}.
+
     \item \textbf{Gewerkschaftsdichte} (PERCENT\_EMPLOYEES\_TUD): Der Anteil der in Gewerkschaften 
     organisierten Arbeitnehmer wird berücksichtigt, da Gewerkschaften eine wichtige Rolle bei der 
     Aushandlung von Arbeitsbedingungen und Arbeitsplatzsicherheit spielen \parencite{oecd2022tud}. 
@@ -100,22 +102,27 @@ durch andere Faktoren verzerrt wird, werden mehrere Kontrollvariablen in die Ana
     Mindestlöhne sichern und Beschäftigungsschutzmaßnahmen verstärken 
     \parencite[S. 61]{nickell1997unemployment}. Zur Sicherstellung einer vollständigen Zeitreihe 
     wurden fehlende Werte dieser Variable mittels linearer Interpolation ergänzt.
-    \item \textbf{Wohlfahrtsstaatentyp} (WELFARE\_STATE): Die Wohlfahrtsstaatentypologie nach 
-    Esping-Andersen \parencite{espingandersen1990thethree} wird in die Analyse integriert, 
-    um zu untersuchen, inwiefern institutionelle Unterschiede den Effekt von \ac{ICT}-Investitionen 
-    auf die Arbeitslosenquote beeinflussen. Die Länder werden in der Analyse in fünf Kategorien 
-    unterteilt: \textit{sozialdemokratisch}, \textit{konservativ}, \textit{liberal}, 
-    \textit{südeuropäisch} und \textit{postsozialistisch}.
+
     \item \textbf{Tertiärer Bildungsanteil} (PERCENT\_TERTIARY\_EDUCATION): Diese 
     Variable gibt den Prozentsatz der Bevölkerung an, der einen tertiären Bildungsabschluss 
     besitzt. Eine höhere Bildungsbeteiligung könnte den negativen Einfluss von 
     \ac{ICT}-Investitionen auf geringqualifizierte Arbeitnehmer abschwächen, da mehr Menschen für 
     technologische Berufe qualifiziert sind \parencite{oecd2022education}.
+
     \item \textbf{Regulierungsstrenge des Arbeitsmarkts} (REGULATION\_STRICTNESS): Diese Variable 
     misst, wie stark der Arbeitsmarkt eines Landes reguliert ist, insbesondere im Hinblick auf 
     Kündigungsschutz und Beschäftigungsflexibilität. Striktere Regulierung kann die 
     Arbeitslosenquote erhöhen, da Unternehmen zögerlicher bei Neueinstellungen sind 
     \parencite{oecd2022regulation}.
+
+    \item \textbf{Wohlfahrtsstaatentyp} (WELFARE\_STATE): Die Wohlfahrtsstaatentypologie nach 
+    Esping-Andersen \parencite{espingandersen1990thethree} wird in die Analyse integriert, 
+    um zu untersuchen, inwiefern institutionelle Unterschiede den Effekt von \ac{ICT}-Investitionen 
+    auf die Arbeitslosenquote beeinflussen. Die Länder werden in der Analyse in fünf Kategorien 
+    unterteilt: \textit{sozialdemokratisch}, \textit{konservativ}, \textit{liberal}, 
+    \textit{südeuropäisch} und \textit{postsozialistisch}. Diese Kontrollvariable wird gesondert 
+    als eigene Hypothese getestet.
+
 \end{itemize}
 
 Die Kombination dieser Daten ermöglicht es, länderspezifische Unterschiede in der Wirtschaftskraft, 
@@ -126,35 +133,30 @@ den Arbeitsmarkt beeinflussen.
 
 \subsection{Analytische Methode}
 
-Die Analyse dieser Arbeit basiert auf einer Paneldatenanalyse, um die Auswirkungen von 
-\ac{ICT}-Investitionen auf die Arbeitslosenquote nach Bildungsniveau zu untersuchen. Die Wahl 
-einer Paneldatenmethode ermöglicht es, sowohl individuelle Heterogenität zwischen Ländern als auch 
+Die Analyse dieser Arbeit basiert auf einer Paneldatenanalyse, um die Auswirkungen von
+\ac{ICT}-Investitionen auf die Arbeitslosenquote nach Bildungsniveau zu untersuchen. Die Wahl
+einer Paneldatenmethode ermöglicht es, sowohl individuelle Heterogenität zwischen Ländern als auch
 dynamische Entwicklungen über die Zeit zu erfassen \parencite{wooldridge2010econometric}.
 
-Zur Untersuchung der Effekte wurden zwei gängige Modelle der Paneldatenanalyse betrachtet: das 
-\ac{FE}- und das \ac{RE}-Modell. Während das \ac{FE}-Modell explizit für zeitinvariante 
-länderspezifische Eigenschaften kontrolliert \parencite[S. 251–256]{wooldridge2010econometric}, 
-geht das \ac{RE}-Modell davon aus, dass länderspezifische Effekte zufällig verteilt und nicht mit 
-den unabhängigen Variablen korreliert sind \parencite[S. 17–20]{baltagi2021econometric}. Falls 
-diese Annahme verletzt ist, können die Schätzungen im \ac{RE}-Modell verzerrt sein.
+Für diese Analyse wurden \ac{FE}-Modelle gewählt, da sie eine robustere Schätzung der
+Zusammenhänge zwischen \ac{ICT}-Investitionen und der Arbeitslosigkeit ermöglichen. Dies ist
+besonders relevant, da die Untersuchung auf Veränderungen innerhalb eines Landes über die Zeit
+fokussiert und länderspezifische Eigenschaften nicht als erklärende Variablen modelliert werden.
+\ac{RE}-Modelle werden aufgrund der potenziellen Korrelation zwischen länderspezifischen Effekten
+und den unabhängigen Variablen nicht verwendet, da es in diesem Fall zu verzerrten Schätzungen
+führen könnte \parencite[S. 251–256]{wooldridge2010econometric}.
 
-Für diese Analyse wurde das \ac{FE}-Modell gewählt, da es eine robustere Schätzung der 
-Zusammenhänge zwischen \ac{ICT}-Investitionen und der Arbeitslosigkeit ermöglicht. Dies ist 
-besonders relevant, da die Untersuchung auf Veränderungen innerhalb eines Landes über die Zeit 
-fokussiert und länderspezifische Eigenschaften nicht als erklärende Variablen modelliert werden. 
-Die Modellwahl basiert auf einem Hausman-Test, dessen Ergebnisse für Fixed Effects sprechen.
-
-Darüber hinaus wird die Analyse durch Interaktionseffekte ergänzt, die es ermöglichen, 
-institutionelle Unterschiede zwischen den Ländern zu berücksichtigen. Die Modelle beinhalten 
-Dummy-Variablen für die Wohlfahrtsstaatentypen, um systematische Unterschiede zwischen den 
-Regimetypen in ihrer Reaktion auf \ac{ICT}-Investitionen zu identifizieren 
-\parencite{espingandersen1990thethree}. Zusätzlich werden Jahres-Faktor-Dummies integriert, um 
-allgemeine makroökonomische Entwicklungen (z. B. Finanzkrisen oder technologische Schübe) aus den 
-Modellen zu kontrollieren. Die Interaktion zwischen ICT-Investitionen und Wohlfahrtsstaatentypen 
+Darüber hinaus wird die Analyse durch Interaktionseffekte ergänzt, die es ermöglichen,
+institutionelle Unterschiede zwischen den Ländern zu berücksichtigen. Die Modelle beinhalten
+Dummy-Variablen für die Wohlfahrtsstaatentypen, um systematische Unterschiede zwischen den
+Regimetypen in ihrer Reaktion auf \ac{ICT}-Investitionen zu identifizieren
+\parencite{espingandersen1990thethree}. Zusätzlich werden Jahres-Faktor-Dummies integriert, um
+allgemeine makroökonomische Entwicklungen (z. B. Finanzkrisen oder technologische Schübe) aus den
+Modellen zu kontrollieren. Die Interaktion zwischen ICT-Investitionen und Wohlfahrtsstaatentypen
 ermöglicht eine differenzierte Analyse der moderierenden Effekte institutioneller Rahmenbedingungen.
 
-Durch diese Kombination aus \ac{FE}-Modellen, Interaktionseffekten und Zeitdummies bietet die 
-Paneldatenanalyse eine solide Grundlage für die Untersuchung der Auswirkungen von 
-\ac{ICT}-Investitionen auf die Arbeitslosigkeit. Die longitudinale Struktur der Daten erlaubt eine 
-differenzierte Betrachtung, die sowohl kurzfristige als auch langfristige Beschäftigungseffekte 
+Durch diese Kombination aus \ac{FE}-Modellen, Interaktionseffekten und Zeitdummies bietet die
+Paneldatenanalyse eine solide Grundlage für die Untersuchung der Auswirkungen von
+\ac{ICT}-Investitionen auf die Arbeitslosigkeit. Die longitudinale Struktur der Daten erlaubt eine
+differenzierte Betrachtung, die sowohl kurzfristige als auch langfristige Beschäftigungseffekte
 berücksichtigt.

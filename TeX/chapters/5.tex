@@ -1,10 +1,10 @@
-% TODO: Durchlesen (Stand 04.03.2025)
+% TODO: - (Stand 08.03.2025)
+
+\section{Daten und Methodik}
 
 %%%%%%%%%%%%%%
 % Datensätze %
 %%%%%%%%%%%%%%
-
-\section{Daten und Methodik}
 
 \subsection{Datensätze}
 
@@ -18,19 +18,22 @@ Für diese Untersuchung werden insbesondere die Datensätze zu \ac{ICT}-Investit
 \parencite{oecd2022ict} sowie zu den Arbeitslosenquoten nach Bildungsniveau 
 \parencite{oecd2022unemployment} verwendet. Zusätzlich wurden weitere ökonomische und 
 institutionelle Indikatoren als Kontrollvariablen integriert, um die Robustheit der Analyse 
-zu erhöhen. Dazu gehören das \ac{BIP} pro Kopf \parencite{oecd2022gdp}, die Gewerkschaftsdichte 
-\parencite{oecd2022tud}, der Anteil der Bevölkerung mit tertiärem Bildungsabschluss 
-\parencite{oecd2022education} sowie der Grad der Regulierung des Arbeitnehmerschutzes 
-\parencite{oecd2022regulation}. Zudem wird die Wohlfahrtsstaatentypologie nach Esping-Andersen 
-\parencite{espingandersen1990thethree} genutzt, um institutionelle Unterschiede zwischen den 
-Ländern zu erfassen. Die Wohlfahrtsstaaten-Variable wird separat betrachtet, da sie nicht
-nur eine Kontrollvariable darstellt, sondern auch eine eigene Hypothese in der Analyse testet. 
-Die finalen Daten umfassen insgesamt 35 OECD- und ausgewählte Nicht-OECD-Länder 
-\footnote{Untersuchte Länder: Australien, Österreich, Belgien, Bulgarien, Brasilien, 
-Kanada, Kroatien, Tschechien, Dänemark, Estland, Finnland, Frankreich, Deutschland, 
-Griechenland, Ungarn, Island, Italien, Irland, Lettland, Litauen, Luxemburg, Niederlande, 
-Neuseeland, Norwegen, Polen, Portugal, Rumänien, Spanien, Schweden, Schweiz, Türkei, Slowakei, 
-Slowenien, Vereinigtes Königreich, USA.} und decken den Zeitraum von 2005 bis 2022 ab. Nach 
+zu erhöhen. Dazu gehören das \ac{BIP} pro Kopf \parencite{oecd2022gdp}, die 
+Gewerkschaftsdichte \parencite{oecd2022tud}, der Anteil der Bevölkerung mit tertiärem 
+Bildungsabschluss \parencite{oecd2022education} sowie der Grad der Regulierung des 
+Arbeitnehmerschutzes \parencite{oecd2022regulation}. Zudem wird die Wohlfahrtsstaatentypologie 
+nach Esping-Andersen \parencite{espingandersen1990thethree} genutzt, um institutionelle 
+Unterschiede zwischen den Ländern zu erfassen. Die Wohlfahrtsstaaten-Variable wird separat 
+betrachtet, da sie nichtnur eine Kontrollvariable darstellt, sondern auch eine eigene 
+Hypothese in der Analyse testet. Die finalen Daten umfassen insgesamt 35 OECD- und 
+ausgewählte Nicht-OECD-Länder
+\footnote{
+    Untersuchte Länder: Australien, Österreich, Belgien, Bulgarien, Brasilien, Kanada, 
+    Kroatien, Tschechien, Dänemark, Estland, Finnland, Frankreich, Deutschland, Griechenland, 
+    Ungarn, Island, Italien, Irland, Lettland, Litauen, Luxemburg, Niederlande, Neuseeland, 
+    Norwegen, Polen, Portugal, Rumänien, Spanien, Schweden, Schweiz, Türkei, Slowakei, 
+    Slowenien, Vereinigtes Königreich, USA.
+} und decken den Zeitraum von 2005 bis 2022 ab. Nach 
 der Bereinigung und Zusammenführung der relevanten Variablen verbleiben 3973 Beobachtungen 
 für die Paneldatenanalyse.
 
@@ -41,13 +44,10 @@ Informationen über die Arbeitslosenquoten in verschiedenen Bildungsgruppen
 tertiär gebildeter Personen und die Regulierungsstrenge des Arbeitsmarkts wird sichergestellt, 
 dass sowohl wirtschaftliche als auch institutionelle Unterschiede in den Ländern angemessen 
 berücksichtigt werden. Zur Sicherstellung einer vollständigen Zeitreihe wurden fehlende Werte 
-der Variable `PERCENT\_EMPLOYEES\_TUD` mittels linearer Interpolation ergänzt. Zudem wurde
-das \ac{BIP} pro Kopf zur besseren Interpretierbarkeit durch 1000 geteilt.
-
-Die längsschnittliche Struktur der Daten ermöglicht es, sowohl kurzfristige als auch 
-langfristige Entwicklungen zu analysieren und Zusammenhänge zwischen ICT-Investitionen und 
-Arbeitslosigkeit differenziert zu betrachten.
-
+der Variablen \textit{Gewerkschaftsdichte}, \textit{Tertiärer Bildungsanteil} und 
+\textit{Arbeitsmarktregulierung} mittels linearer Inter- und Extrapolation 
+ergänzt. Zudem wurde die Variable \textit{\ac{BIP} pro Kopf} zur besseren Interpretierbarkeit 
+durch 1000 geteilt.
 
 %%%%%%%%%%%%%%%%%%%%%%%
 % Operationalisierung %
@@ -55,23 +55,28 @@ Arbeitslosigkeit differenziert zu betrachten.
 
 \subsection{Operationalisierung}
 
-Zur Beantwortung der Forschungsfrage - wie Investitionen in Informations- und 
-Kommunikationstechnologien die Arbeitslosenquoten in unterschiedlichen Bildungsgruppen 
-beeinflussen - ist eine präzise und konsistente Operationalisierung der zentralen Konzepte 
-notwendig. Dies gewährleistet, dass die Untersuchung die beabsichtigten Zusammenhänge abbildet 
-und die Daten sinnvoll ausgewertet werden können.
+Zur Beantwortung der Forschungsfrage - wie Investitionen in \ac{ICT} die Arbeitslosenquoten 
+in unterschiedlichen Bildungsniveaus beeinflussen - ist eine präzise und konsistente 
+Operationalisierung der zentralen Konzepte notwendig. Dies gewährleistet, dass die 
+Untersuchung die beabsichtigten Zusammenhänge abbildet und die Daten sinnvoll ausgewertet 
+werden können.
 
 Die abhängige Variable dieser Untersuchung ist die \textit{Arbeitslosenquote} 
-(UNEMPLOYMENT\_RATE\_PERCENT), die nach dem Bildungsniveau der Bevölkerung differenziert wird. 
-Der \ac{OECD}-Datensatz unterteilt das Bildungsniveau in drei Hauptkategorien:
+(UNEMPLOYMENT\_RATE\_PERCENT), die nach dem Bildungsniveau der Bevölkerung differenziert 
+wird. Der \ac{OECD}-Datensatz unterteilt das Bildungsniveau in drei Hauptkategorien:
 
 \begin{enumerate}
+
     \item \textbf{niedriges Bildungsniveau} (Low education): Personen ohne abgeschlossene 
-    Schulbildung oder mit einem maximalen Hauptschulabschluss.
+    Schulbildung oder mit einem maximalen Hauptschulabschluss \parencite{oecd2022unemployment}.
+
     \item \textbf{mittleres Bildungsniveau} (Medium education): Personen mit 
-    Sekundarschulabschluss oder einer abgeschlossenen Berufsausbildung.
+    Sekundarschulabschluss oder einer abgeschlossenen Berufsausbildung 
+    \parencite{oecd2022unemployment}.
+
     \item \textbf{hohes Bildungsniveau} (High education): Personen mit Hochschulabschluss, wie 
-    einem Bachelor, Master oder Doktortitel.
+    einem Bachelor, Master oder Doktortitel \parencite{oecd2022unemployment}.
+
 \end{enumerate}
 
 Arbeitslose sind nach der Definition der \ac{OECD} Personen im erwerbsfähigen Alter, die keine 
@@ -82,81 +87,100 @@ Indikator wird als Prozentsatz der Erwerbsbevölkerung gemessen und ist saisonbe
 Die zentrale unabhängige Variable \textit{\ac{ICT}-Investitionen} (ICT\_INVEST\_SHARE\_GDP) 
 misst Investitionen in digitale Infrastruktur, Software, Hardware und Technologien, die zur 
 Verbesserung betrieblicher Effizienz und Produktivität beitragen \parencite{oecd2022ict}. Die 
-Daten basieren auf den Definitionen des \ac{SNA08} und werden als Anteil am \ac{BIP} in Prozent 
-angegeben.
+Daten basieren auf den Definitionen des \ac{SNA08} und werden als Anteil am \ac{BIP} in 
+Prozent angegeben.
 
-Um sicherzustellen, dass der Effekt der \ac{ICT}-Investitionen auf die Arbeitslosenquote nicht 
-durch andere Faktoren verzerrt wird, werden mehrere Kontrollvariablen in die Analyse aufgenommen:
+Um sicherzustellen, dass der Effekt der \textit{\ac{ICT}-Investitionen} auf die 
+\textit{Arbeitslosenquote} nicht durch andere Faktoren verzerrt wird, werden mehrere 
+Kontrollvariablen in die Analyse aufgenommen:
 
 \begin{itemize}
-    \item \textbf{\ac{BIP} pro Kopf} (GDP\_PER\_CAPITA): Diese Variable misst den wirtschaftlichen 
-    Wohlstand eines Landes in tausend US-Dollar pro Jahr und kontrolliert den Entwicklungsstand 
-    eines Landes, da wirtschaftlich wohlhabendere Länder tendenziell niedrigere Arbeitslosenquoten 
-    aufweisen \parencite{oecd2022gdp}.
+    \item \textbf{\ac{BIP} pro Kopf} (GDP\_PER\_CAPITA): Diese Variable misst den 
+    wirtschaftlichen Wohlstand eines Landes in tausend US-Dollar pro Jahr und kontrolliert 
+    den Entwicklungsstand eines Landes, da wirtschaftlich wohlhabendere Länder tendenziell 
+    niedrigere Arbeitslosenquoten aufweisen \parencite{oecd2022gdp}.
 
-    \item \textbf{Gewerkschaftsdichte} (PERCENT\_EMPLOYEES\_TUD): Der Anteil der in Gewerkschaften 
-    organisierten Arbeitnehmer wird berücksichtigt, da Gewerkschaften eine wichtige Rolle bei der 
-    Aushandlung von Arbeitsbedingungen und Arbeitsplatzsicherheit spielen \parencite{oecd2022tud}. 
-    Frühere Studien zeigen, dass eine hohe Gewerkschaftsdichte oft mit niedrigeren 
-    Arbeitslosenquoten für geringqualifizierte Arbeitnehmer verbunden ist, da Gewerkschaften 
-    Mindestlöhne sichern und Beschäftigungsschutzmaßnahmen verstärken 
-    \parencite[S. 61]{nickell1997unemployment}. Zur Sicherstellung einer vollständigen Zeitreihe 
-    wurden fehlende Werte dieser Variable mittels linearer Interpolation ergänzt.
+    \item \textbf{Gewerkschaftsdichte} (PERCENT\_EMPLOYEES\_TUD): Der Anteil der in 
+    Gewerkschaften organisierten Arbeitnehmer wird berücksichtigt, da Gewerkschaften eine 
+    wichtige Rolle bei der Aushandlung von Arbeitsbedingungen und Arbeitsplatzsicherheit 
+    spielen \parencite{oecd2022tud}. Frühere Studien zeigen, dass eine hohe Gewerkschaftsdichte 
+    oft mit niedrigeren Arbeitslosenquoten für geringqualifizierte Arbeitnehmer verbunden ist, 
+    da Gewerkschaften Mindestlöhne sichern und Beschäftigungsschutzmaßnahmen verstärken 
+    \parencite[S. 61]{nickell1997unemployment}.
 
     \item \textbf{Tertiärer Bildungsanteil} (PERCENT\_TERTIARY\_EDUCATION): Diese 
     Variable gibt den Prozentsatz der Bevölkerung an, der einen tertiären Bildungsabschluss 
     besitzt. Eine höhere Bildungsbeteiligung könnte den negativen Einfluss von 
-    \ac{ICT}-Investitionen auf geringqualifizierte Arbeitnehmer abschwächen, da mehr Menschen für 
-    technologische Berufe qualifiziert sind \parencite{oecd2022education}.
+    \ac{ICT}-Investitionen auf geringqualifizierte Arbeitnehmer abschwächen, da mehr Menschen 
+    für technologische Berufe qualifiziert sind \parencite{oecd2022education}.
 
-    \item \textbf{Regulierungsstrenge des Arbeitsmarkts} (REGULATION\_STRICTNESS): Diese Variable 
-    misst, wie stark der Arbeitsmarkt eines Landes reguliert ist, insbesondere im Hinblick auf 
-    Kündigungsschutz und Beschäftigungsflexibilität. Striktere Regulierung kann die 
-    Arbeitslosenquote erhöhen, da Unternehmen zögerlicher bei Neueinstellungen sind 
+    \item \textbf{Arbeitsmarktregulierung} (REGULATION\_STRICTNESS): Diese 
+    Variable misst, wie stark der Arbeitsmarkt eines Landes reguliert ist, insbesondere im 
+    Hinblick auf Kündigungsschutz und Beschäftigungsflexibilität. Striktere Regulierung kann 
+    die Arbeitslosenquote erhöhen, da Unternehmen zögerlicher bei Neueinstellungen sind 
     \parencite{oecd2022regulation}.
 
-    \item \textbf{Wohlfahrtsstaatentyp} (WELFARE\_STATE): Die Wohlfahrtsstaatentypologie nach 
-    Esping-Andersen \parencite{espingandersen1990thethree} wird in die Analyse integriert, 
-    um zu untersuchen, inwiefern institutionelle Unterschiede den Effekt von \ac{ICT}-Investitionen 
-    auf die Arbeitslosenquote beeinflussen. Die Länder werden in der Analyse in fünf Kategorien 
-    unterteilt: \textit{sozialdemokratisch}, \textit{konservativ}, \textit{liberal}, 
-    \textit{südeuropäisch} und \textit{postsozialistisch}. Diese Kontrollvariable wird gesondert 
-    als eigene Hypothese getestet.
+    \item \textbf{Wohlfahrtsstaatentyp} (WELFARE\_STATE): Die Typologie nach Esping-Andersen 
+    \parencite{espingandersen1990thethree} wird in die Analyse integriert, um zu untersuchen, 
+    inwiefern institutionelle Unterschiede den Effekt von \textit{\ac{ICT}-Investitionen} auf 
+    die \textit{Arbeitslosenquote} beeinflussen. Die Länder werden in der Analyse in fünf 
+    Kategorien unterteilt
+    \footnote{
+        Die Zuordnung erfolgt wie folgt: 
+        \textit{nordisch} (Dänemark, Schweden, Norwegen, Finnland, Island); 
+        \textit{mitteleuropäisch} (Deutschland, Frankreich, Österreich, Belgien, Niederlande, 
+        Luxemburg, Schweiz); 
+        \textit{angelsächsisch} 
+        (Vereinigte Staaten, Vereinigtes Königreich, Kanada, Australien, Neuseeland, Irland); 
+        \textit{südeuropäisch} (Italien, Spanien, Portugal, Griechenland); 
+        \textit{postsozialistisch} (Polen, Tschechien, Ungarn, Slowakei, Slowenien, Estland, 
+        Lettland, Litauen, Rumänien, Bulgarien).
+    }: \textit{nordisch}, \textit{mitteleuropäisch}, \textit{angelsächsisch}, 
+    \textit{südeuropäisch} und \textit{postsozialistisch}. Diese Kontrollvariable wird 
+    gesondert als eigene Hypothese getestet.
 
 \end{itemize}
 
-Die Kombination dieser Daten ermöglicht es, länderspezifische Unterschiede in der Wirtschaftskraft, 
-den regulatorischen Rahmenbedingungen und der Bildungsstruktur zu kontrollieren, um Zusammenhänge 
-zwischen ICT-Investitionen und Arbeitslosenquoten differenziert zu analysieren. Zudem erlauben die 
-aufgenommenen Kontrollvariablen eine differenziertere Betrachtung institutioneller Faktoren, die 
-den Arbeitsmarkt beeinflussen.
+Die Kombination dieser Daten ermöglicht es, länderspezifische Unterschiede in der 
+Wirtschaftskraft, den regulatorischen Rahmenbedingungen und der Bildungsstruktur zu 
+kontrollieren, um Zusammenhänge zwischen \textit{\ac{ICT}-Investitionen} und 
+\textit{Arbeitslosenquote} differenziert zu analysieren. Zudem erlauben die aufgenommenen 
+Kontrollvariablen eine differenziertere Betrachtung institutioneller Faktoren, die den 
+Arbeitsmarkt beeinflussen. 
+
+%%%%%%%%%%%%%%%%%%%%%%%
+% Analytische Methode %
+%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Analytische Methode}
 
-Die Analyse dieser Arbeit basiert auf einer Paneldatenanalyse, um die Auswirkungen von
-\ac{ICT}-Investitionen auf die Arbeitslosenquote nach Bildungsniveau zu untersuchen. Die Wahl
-einer Paneldatenmethode ermöglicht es, sowohl individuelle Heterogenität zwischen Ländern als auch
-dynamische Entwicklungen über die Zeit zu erfassen \parencite{wooldridge2010econometric}.
+Die Analyse dieser Arbeit basiert auf einer Paneldatenanalyse, um die Auswirkungen von 
+\textit{\ac{ICT}-Investitionen} auf die \textit{Arbeitslosenquote} nach Bildungsniveau zu 
+untersuchen. Die Wahl einer Paneldatenmethode ermöglicht es, sowohl individuelle Heterogenität 
+zwischen Ländern als auch dynamische Entwicklungen über die Zeit zu erfassen 
+\parencite{wooldridge2010econometric}. 
 
-Für diese Analyse wurden \ac{FE}-Modelle gewählt, da sie eine robustere Schätzung der
-Zusammenhänge zwischen \ac{ICT}-Investitionen und der Arbeitslosigkeit ermöglichen. Dies ist
-besonders relevant, da die Untersuchung auf Veränderungen innerhalb eines Landes über die Zeit
-fokussiert und länderspezifische Eigenschaften nicht als erklärende Variablen modelliert werden.
-\ac{RE}-Modelle werden aufgrund der potenziellen Korrelation zwischen länderspezifischen Effekten
-und den unabhängigen Variablen nicht verwendet, da es in diesem Fall zu verzerrten Schätzungen
-führen könnte \parencite[S. 251–256]{wooldridge2010econometric}.
+Für diese Analyse wurden \ac{FE}-Modelle gewählt, da sie eine robustere Schätzung der 
+Zusammenhänge zwischen \textit{\ac{ICT}-Investitionen} und der \textit{Arbeitslosenquote} 
+ermöglichen. Dies ist besonders relevant, da die Untersuchung auf Veränderungen innerhalb 
+eines Landes über die Zeit fokussiert und länderspezifische Eigenschaften nicht als erklärende 
+Variablen modelliert werden. \ac{RE}-Modelle werden aufgrund der potenziellen Korrelation 
+zwischen länderspezifischen Effekten und den unabhängigen Variablen nicht verwendet, da es in 
+diesem Fall zu verzerrten Schätzungen führen könnte 
+\parencite[S. 251–256]{wooldridge2010econometric}. 
 
-Darüber hinaus wird die Analyse durch Interaktionseffekte ergänzt, die es ermöglichen,
-institutionelle Unterschiede zwischen den Ländern zu berücksichtigen. Die Modelle beinhalten
-Dummy-Variablen für die Wohlfahrtsstaatentypen, um systematische Unterschiede zwischen den
-Regimetypen in ihrer Reaktion auf \ac{ICT}-Investitionen zu identifizieren
-\parencite{espingandersen1990thethree}. Zusätzlich werden Jahres-Faktor-Dummies integriert, um
-allgemeine makroökonomische Entwicklungen (z. B. Finanzkrisen oder technologische Schübe) aus den
-Modellen zu kontrollieren. Die Interaktion zwischen ICT-Investitionen und Wohlfahrtsstaatentypen
-ermöglicht eine differenzierte Analyse der moderierenden Effekte institutioneller Rahmenbedingungen.
+Darüber hinaus wird die Analyse durch Interaktionseffekte ergänzt, die es ermöglichen, 
+institutionelle Unterschiede zwischen den Ländern zu berücksichtigen. Die Modelle beinhalten 
+eine Variable für den \textit{Wohlfahrtsstaatentyp}, um systematische Unterschiede zwischen den 
+Regimetypen in ihrer Reaktion auf \textit{\ac{ICT}-Investitionen} zu identifizieren 
+\parencite{espingandersen1990thethree}. Zusätzlich werden Jahres-Fixed Effects integriert, um 
+allgemeine makroökonomische Entwicklungen (z. B. Finanzkrisen oder technologische Schübe) aus 
+den Modellen zu kontrollieren. Die Interaktion zwischen \textit{\ac{ICT}-Investitionen} und 
+\textit{Wohlfahrtsstaatentyp} ermöglicht eine differenzierte Analyse der moderierenden Effekte 
+institutioneller Rahmenbedingungen.
 
 Durch diese Kombination aus \ac{FE}-Modellen, Interaktionseffekten und Zeitdummies bietet die
-Paneldatenanalyse eine solide Grundlage für die Untersuchung der Auswirkungen von
-\ac{ICT}-Investitionen auf die Arbeitslosigkeit. Die longitudinale Struktur der Daten erlaubt eine
-differenzierte Betrachtung, die sowohl kurzfristige als auch langfristige Beschäftigungseffekte
-berücksichtigt.
+Paneldatenanalyse eine solide Grundlage für die Untersuchung der Auswirkungen von 
+\textit{\ac{ICT}-Investitionen} auf die \textit{Arbeitslosenquote}. Die longitudinale Struktur 
+der Daten erlaubt eine differenzierte Betrachtung, die sowohl kurzfristige als auch 
+langfristige Beschäftigungseffekte berücksichtigt. 

@@ -1,19 +1,11 @@
-# TODO: - (Stand 04.03.2025)
-
 # Project directories and files
-*/output/*Arbeitsversion*.pdf*
+*/output/*Arbeitsversion*.pdf
 */output/assets
 */output/chapters
 */literature
-*signature*.pdf
 *_old.tex
 *_old.R
-
-# Unused data sets
-*OECD_employment_protection_legislation.csv
-*OECD_tertiary_education_rate.csv
-*OECD_lm_regulations.xlsx
-*OECD_epl.xlsx
+*signature*.pdf
 
 # TeX output files
 *.fdb_latexmk

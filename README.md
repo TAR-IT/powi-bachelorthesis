@@ -3,7 +3,7 @@
 # Bachelorarbeit – Politikwissenschaften B.A.
 **Titel:** Der Einfluss von ICT-Investitionen auf die Arbeitslosigkeit in verschiedenen Bildungsgruppen in OECD-Ländern\
 **Autor:** Tobias A. Rau\
-**Matrikelnummer:** 661**97\
+**Matrikelnummer:** 6619097\
 **Universität:** Goethe-Universität Frankfurt\
 **Fachbereich:** Fachbereich 03 – Geisteswissenschaften\
 **Studiengang:** Politikwissenschaften B.A. (Nebenfach Soziologie)\
@@ -15,7 +15,7 @@
 
 ## Projektbeschreibung
 
-Diese Bachelorarbeit untersucht den Zusammenhang zwischen **Investitionen in Informations- und Kommunikationstechnologie (ICT)** und der **Arbeitslosigkeit in verschiedenen Bildungsniveaus** in OECD-Ländern. Die Analyse basiert auf **Paneldaten (2005–2022)** und verwendet **Fixed Effects-Modelle** zur empirischen Untersuchung der Hypothesen.
+Diese Bachelorarbeit untersucht den Zusammenhang zwischen **Investitionen in Informations- und Kommunikationstechnologie (ICT)** und der **Arbeitslosigkeit in verschiedenen Bildungsniveaus** in OECD-Ländern. Die Analyse basiert auf **Paneldaten (2005–2022)** und verwendet **Fixed Effects-Modelle** mit Interaktionseffekten zur empirischen Untersuchung der Hypothesen.
 
 ### Forschungsfrage
 

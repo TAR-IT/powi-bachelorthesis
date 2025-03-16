@@ -8,8 +8,6 @@
 % Daten und Methodik: Datensätze %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% TODO: Re-read. (14.03.2025)
-
 \subsection{Datensätze}
 
 Die vorliegenden Daten stammen aus den umfangreichen Datensätzen der \ac{OECD}, einer 
@@ -28,7 +26,7 @@ Bildungsabschluss \parencite{oecd2022education} sowie der Grad der Regulierung d
 Arbeitnehmerschutzes \parencite{oecd2022regulation}. Zudem wird die Wohlfahrtsstaatentypologie 
 nach Esping-Andersen \parencite{espingandersen1990thethree} genutzt, um institutionelle 
 Unterschiede zwischen den Ländern zu erfassen. Die Wohlfahrtsstaaten-Variable wird separat 
-betrachtet, da sie nichtnur eine Kontrollvariable darstellt, sondern auch eine eigene 
+betrachtet, da sie nicht nur eine Kontrollvariable darstellt, sondern auch eine eigene 
 Hypothese in der Analyse testet. Die finalen Daten umfassen insgesamt 35 OECD- und 
 ausgewählte Nicht-OECD-Länder
 \footnote{
@@ -41,23 +39,21 @@ ausgewählte Nicht-OECD-Länder
 der Bereinigung und Zusammenführung der relevanten Variablen verbleiben 3973 Beobachtungen 
 für die Paneldatenanalyse.
 
-Die \ac{ICT}-Investitionen messen die Bruttoanlageinvestitionen in digitale Infrastrukturen 
-und Technologien \parencite{oecd2022ict}. Die Arbeitsmarktstatistiken bieten detaillierte 
-Informationen über die Arbeitslosenquoten in verschiedenen Bildungsgruppen 
-\parencite{oecd2022unemployment}. Durch die Ergänzung um Kontrollvariablen wie den Anteil 
-tertiär gebildeter Personen und die \textit{Regulierungsstrenge des Arbeitsmarktes} wird 
-sichergestellt, dass sowohl wirtschaftliche als auch institutionelle Unterschiede in den 
-Ländern angemessen berücksichtigt werden. Zur Sicherstellung einer vollständigen Zeitreihe 
-wurden fehlende Werte der Variablen \textit{Gewerkschaftsdichte}, 
-\textit{Tertiärer Bildungsanteil} und \textit{Arbeitsmarktregulierung} mittels linearer 
-Inter- und Extrapolation ergänzt. Zudem wurde die Variable \textit{\ac{BIP} pro Kopf} zur 
-besseren Interpretierbarkeit durch 1000 geteilt.
+Die \textit{\ac{ICT}-Investitionen} messen die Bruttoanlageinvestitionen in digitale 
+Infrastrukturen und Technologien \parencite{oecd2022ict}. Die \textit{Arbeitslosenquote} 
+bieten detaillierte Informationen über den Grad der Arbeitslosigkeit in verschiedenen 
+Bildungsniveaus \parencite{oecd2022unemployment}. Durch die Ergänzung um Kontrollvariablen 
+wie \textit{\ac{BIP} pro Kopf}, \textit{Tertiärer Bildungsanteil}, \textit{Gewerkschaftsdichte} 
+und \textit{Arbeitsmarktregulierung} wird sichergestellt, dass sowohl wirtschaftliche als auch 
+institutionelle Unterschiede in den Ländern angemessen berücksichtigt werden. Zur Sicherstellung 
+einer vollständigen Zeitreihe wurden fehlende Werte der Variablen \textit{Gewerkschaftsdichte}, 
+\textit{Tertiärer Bildungsanteil} und \textit{Arbeitsmarktregulierung} mittels linearer Inter- 
+und Extrapolation ergänzt. Zudem wurde die Variable \textit{\ac{BIP} pro Kopf} zur besseren 
+Interpretierbarkeit durch 1000 geteilt.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Daten und Methodik: Operationalisierung %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% TODO: Re-read. (14.03.2025)
 
 \subsection{Operationalisierung}
 
@@ -158,15 +154,12 @@ Arbeitsmarkt beeinflussen.
 % Daten und Methodik: Analytische Methode %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% TODO: Re-read. (14.03.2025)
-
 \subsection{Analytische Methode}
 
 Die Analyse dieser Arbeit basiert auf einer Paneldatenanalyse, um die Auswirkungen von 
 \textit{\ac{ICT}-Investitionen} auf die \textit{Arbeitslosenquote} nach Bildungsniveau zu 
 untersuchen. Die Wahl einer Paneldatenmethode ermöglicht es, sowohl individuelle Heterogenität 
-zwischen Ländern als auch dynamische Entwicklungen über die Zeit zu erfassen 
-\parencite{wooldridge2010econometric}. 
+zwischen Ländern als auch dynamische Entwicklungen über die Zeit zu erfassen. 
 
 Für diese Analyse wurden \ac{FE}-Modelle gewählt, da sie eine robustere Schätzung der 
 Zusammenhänge zwischen \textit{\ac{ICT}-Investitionen} und der \textit{Arbeitslosenquote} 
@@ -175,17 +168,16 @@ eines Landes über die Zeit fokussiert und länderspezifische Eigenschaften nich
 Variablen modelliert werden. \ac{RE}-Modelle werden aufgrund der potenziellen Korrelation 
 zwischen länderspezifischen Effekten und den unabhängigen Variablen nicht verwendet, da es in 
 diesem Fall zu verzerrten Schätzungen führen könnte 
-\parencite[S. 251–256]{wooldridge2010econometric}. 
+\parencite[S. 495-496]{wooldridge2010econometric}. 
 
 Darüber hinaus wird die Analyse durch Interaktionseffekte ergänzt, die es ermöglichen, 
 institutionelle Unterschiede zwischen den Ländern zu berücksichtigen. Die Modelle beinhalten 
 eine Variable für den \textit{Wohlfahrtsstaatentyp}, um systematische Unterschiede zwischen den 
-Regimetypen in ihrer Reaktion auf \textit{\ac{ICT}-Investitionen} zu identifizieren 
-\parencite{espingandersen1990thethree}. Zusätzlich werden Jahres-Fixed Effects integriert, um 
-allgemeine makroökonomische Entwicklungen (z. B. Finanzkrisen oder technologische Schübe) aus 
-den Modellen zu kontrollieren. Die Interaktion zwischen \textit{\ac{ICT}-Investitionen} und 
-\textit{Wohlfahrtsstaatentyp} ermöglicht eine differenzierte Analyse der moderierenden Effekte 
-institutioneller Rahmenbedingungen.
+Regimetypen in ihrer Reaktion auf \textit{\ac{ICT}-Investitionen} zu identifizieren. Zusätzlich 
+werden Jahres-Fixed Effects integriert, um allgemeine makroökonomische Entwicklungen (z. B. 
+Finanzkrisen oder technologische Schübe) aus den Modellen zu kontrollieren. Die Interaktion 
+zwischen \textit{\ac{ICT}-Investitionen} und \textit{Wohlfahrtsstaatentyp} ermöglicht eine 
+differenzierte Analyse der moderierenden Effekte institutioneller Rahmenbedingungen.
 
 Durch diese Kombination aus \ac{FE}-Modellen, Interaktionseffekten und Zeitdummies bietet die
 Paneldatenanalyse eine solide Grundlage für die Untersuchung der Auswirkungen von 

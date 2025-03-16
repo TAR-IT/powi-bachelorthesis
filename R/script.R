@@ -106,8 +106,6 @@ plot_country_data <- function(data, country_name) {
               linetype = "dashed") +
     facet_wrap(~SUBJECT, scales = "free_y") +
     labs(
-      title = paste("ICT-Investitionen & Arbeitslosenquote in",
-                    display_name),
       x = "Jahr", y = "ICT-Investitionen (BIP-Anteil)",
       color = "Indikator"
     ) +

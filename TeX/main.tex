@@ -115,6 +115,10 @@
 \null
 \newpage
 
+% Römische Seitenzahlen ab Inhaltsverzeichnis
+\pagenumbering{roman}
+\setcounter{page}{1}
+
 % Inhaltsverzeichnis
 \tableofcontents
 
@@ -207,8 +211,11 @@
 
 \newpage
 
-% Kapitel einbinden
+% Arabische Seitenzahlen ab Einleitung
+\pagenumbering{arabic}
+\setcounter{page}{1}
 
+% Kapitel einbinden
 \include{chapters/1}
 \include{chapters/2}
 \include{chapters/3}

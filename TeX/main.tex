@@ -1,43 +1,28 @@
-%%%%%%%%%%%%%%%%%%%%%%%
-% Dokument definieren %
-%%%%%%%%%%%%%%%%%%%%%%%
-
 \documentclass[a4paper, 12pt]{article}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Pakete laden und konfigurieren %
+% TODO:                          %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % deutsche Spracheinstellungen und -kodierung
-\usepackage[utf8]{inputenc}                                                 % Umlaute korrekt verwenden
-\usepackage[T1]{fontenc}                                                    % Schriftenkodierung
-\usepackage[ngerman]{babel}                                                 % Deutsche Spracheinstellungen
-\usepackage{csquotes}                                                       % Für korrekte Anführungszeichen
-\usepackage{hyphenat}                                                       % Silbentrennung
+\usepackage[utf8]{inputenc} % Umlaute korrekt verwenden
+\usepackage[T1]{fontenc} % Schriftenkodierung
+\usepackage[ngerman]{babel} % Deutsche Spracheinstellungen
+\usepackage{csquotes} % Für korrekte Anführungszeichen
+\usepackage{hyphenat} % Silbentrennung
 
 % Pakete für R
-\usepackage{tabularray}                                                     % Für erweiterte Tabellen
-\usepackage{float}                                                          % Fixiert Objekte mit "H"
-\usepackage[normalem]{ulem}                                                 % Für Unter- und Durchstreichungen
-\UseTblrLibrary{booktabs}                                                   % Unterstützt Booktabs in Tabellen
-\UseTblrLibrary{siunitx}                                                    % Unterstützt Zahlen und Einheiten
-\newcommand{\tinytableTabularrayUnderline}[1]{\underline{#1}}               % Unterstreichung in Tabellen
-\newcommand{\tinytableTabularrayStrikeout}[1]{\sout{#1}}                    % Durchstreichung in Tabellen
-\NewTableCommand{\tinytableDefineColor}[3]{\definecolor{#1}{#2}{#3}}        % Farben in Tabellen
-\usepackage{adjustbox}                                                      % Skaliert Tabellen/Objekte
-\usepackage{multicol}                                                       % Mehrspaltiger Text
-\usepackage{listings}                                                       % Für Code-Listings
-\lstset{
-    language=R,                                                             % Specify the language
-    basicstyle=\ttfamily\scriptsize,                                        % Font style for code
-    numbers=left,                                                           % Line numbers on the left
-    numberstyle=\tiny,                                                      % Font size for line numbers
-    stepnumber=1,                                                           % Number every line
-    breaklines=true,                                                        % Automatically break long lines
-    frame=single,                                                           % Add a border around the code
-    captionpos=b,                                                           % Caption position (bottom)
-    showstringspaces=false                                                  % Do not show spaces in strings
-}
+\usepackage{tabularray} % Für erweiterte Tabellen
+\usepackage{float} % Fixiert Objekte mit "H"
+\usepackage[normalem]{ulem} % Für Unter- und Durchstreichungen
+\UseTblrLibrary{booktabs} % Unterstützt Booktabs in Tabellen
+\UseTblrLibrary{siunitx} % Unterstützt Zahlen und Einheiten
+\newcommand{\tinytableTabularrayUnderline}[1]{\underline{#1}} % Unterstreichung in Tabellen
+\newcommand{\tinytableTabularrayStrikeout}[1]{\sout{#1}} % Durchstreichung in Tabellen
+\NewTableCommand{\tinytableDefineColor}[3]{\definecolor{#1}{#2}{#3}} % Farben in Tabellen
+\usepackage{adjustbox} % Skaliert Tabellen/Objekte
+\usepackage{multicol} % Mehrspaltiger Text
 
 % Layout und Seitenränder
 \usepackage{geometry}
@@ -45,7 +30,7 @@
 
 % Literaturverzeichnis mit APA-Zitierstil
 \usepackage[style=apa, backend=biber, language=ngerman]{biblatex}
-\addbibresource{assets/literature.bib}                                      % Bibliographiedatei einbinden
+\addbibresource{assets/literature.bib} % Bibliographiedatei einbinden
 
 % Pakete für Abkürzungsverzeichnis und Glossar
 \usepackage[printonlyused]{acronym}
@@ -54,30 +39,31 @@
 \usepackage{amsmath, amssymb}
 
 % Für Tabellen und Grafiken
-\usepackage{graphicx}                                                       % Für Bilder
-\usepackage{booktabs}                                                       % Für schönere Tabellen
+\usepackage{graphicx} % Für Bilder
+\usepackage{booktabs} % Für schönere Tabellen
 
 % Hyperlinks
 \usepackage[hidelinks]{hyperref}
 
 % Codebook einbinden
-\usepackage{verbatim}                                                       % Für Einbinden als plain text
+\usepackage{verbatim} % Für Einbinden als plain text
 
 % Zeilenabstand
 \usepackage{setspace}
-\onehalfspacing                                                             % 1,5-facher Zeilenabstand
+\onehalfspacing % 1,5-facher Zeilenabstand
 
 % Kopf- und Fußzeilen
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhf{}                                                                  % Setzt Kopf- und Fußzeile zurück
-\fancyhead[R]{T. A. Rau}                                                    % Name links
-\fancyhead[L]{ICT-Investitionen und Arbeitslosigkeit in Wohlfahrtsstaaten}  % Titel rechts
-\setlength{\headheight}{14.5pt}                                             % Setzt die Höhe der Kopfzeile
-\fancyfoot[C]{\thepage}                                                     % Setzt die Seitenzahl mittig unten
+\fancyhf{} % Setzt Kopf- und Fußzeile zurück
+\fancyhead[R]{T. A. Rau} % Name links
+\fancyhead[L]{ICT-Investitionen und Arbeitslosigkeit in Wohlfahrtsstaaten} % Titel rechts
+\setlength{\headheight}{14.5pt} % Setzt die Höhe der Kopfzeile
+\fancyfoot[C]{\thepage} % Setzt die Seitenzahl mittig unten
 
 %%%%%%%%%%%%%%%%%%%%%
 % Dokument beginnen %
+% TODO: -           %
 %%%%%%%%%%%%%%%%%%%%%
 
 % Titel und Autoreninformationen
@@ -88,7 +74,11 @@
 
 \begin{document}
 
-% Titelseite
+%%%%%%%%%%%%%%
+% Titelseite %
+% TODO: -    %
+%%%%%%%%%%%%%%
+
 \maketitle
 \thispagestyle{empty}
 \vspace{2cm}
@@ -124,88 +114,100 @@
 
 \newpage
 
-% Abkürzungsverzeichnis
+%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abkürzungsverzeichnis %
+% TODO: -               %
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \section*{Abkürzungsverzeichnis}
 \begin{acronym}[AAAAA] % Breite der längsten Abkürzung
 
-  \acro{AI}{Künstliche Intelligenz (aus d. Engl.: \textit{Artificial Intelligence})}
+  \acro{AI}{Künstliche Intelligenz 
+  (aus d. Engl.: \textit{Artificial Intelligence})}
 
   \acro{BIP}{Bruttoinlandsprodukt}
 
-  \acro{FE}{Feste Effekte (aus d. Engl.: \textit{Fixed Effects})}
+  \acro{FE}{Feste Effekte 
+  (aus d. Engl.: \textit{Fixed Effects})}
 
-  \acro{IaaS}{Infrastruktur als Dienstleistung (aus d. Engl.: \textit{Infrastructure 
-  as a Service})}
+  \acro{IaaS}{Infrastruktur als Dienstleistung 
+  (aus d. Engl.: \textit{Infrastructure as a Service})}
   
-  \acro{ICT}{Informations- und Kommunikationstechnologien (aus d. Engl.: 
-  \textit{Information and Communication Technologies})}
+  \acro{ICT}{Informations- und Kommunikationstechnologien 
+  (aus d. Engl.: \textit{Information and Communication Technologies})}
 
-  \acro{IoT}{Internet der Dinge (aus d. Engl.: \textit{Internet of Things})}
+  \acro{IoT}{Internet der Dinge 
+  (aus d. Engl.: \textit{Internet of Things})}
 
-  \acro{IT}{Informationstechnologie/-n (aus d. Engl.: \textit{Information 
-  Technology})}
+  \acro{IT}{Informationstechnologie/-n 
+  (aus d. Engl.: \textit{Information Technology})}
   
   \acro{OECD}{Organisation für wirtschaftliche Zusammenarbeit und Entwicklung 
   (aus d. Engl.: \textit{Organisation for Economic Co-operation and Development})}
 
-  \acro{PaaS}{Plattform als Dienstleistung (aus d. Engl.: \textit{Platform as a 
-  Service})}
+  \acro{PaaS}{Plattform als Dienstleistung 
+  (aus d. Engl.: \textit{Platform as a Service})}
 
-  \acro{RBTC}{Routinespezifischer technologischer Wandel (aus d. Engl.: 
-  \textit{Routine-Biased Technological Change})}
+  \acro{RBTC}{Routinespezifischer technologischer Wandel 
+  (aus d. Engl.: \textit{Routine-Biased Technological Change})}
 
-  \acro{RE}{Zufällige Effekte (aus d. Engl.: \textit{Random Effects})}
+  \acro{RE}{Zufällige Effekte 
+  (aus d. Engl.: \textit{Random Effects})}
 
-  \acro{SaaS}{Software als Dienstleistung (aus d. Engl.: \textit{Software  
-  as a Service})}
+  \acro{SaaS}{Software als Dienstleistung 
+  (aus d. Engl.: \textit{Software  as a Service})}
 
-  \acro{SBTC}{Qualifikationsspezifischer technologischer Wandel (aus d. Engl.: 
-  \textit{Skill-Biased Technological Change})}
+  \acro{SBTC}{Qualifikationsspezifischer technologischer Wandel 
+  (aus d. Engl.: \textit{Skill-Biased Technological Change})}
  
-  \acro{SNA08}{System der volkswirtschaftlichen Gesamtrechnung 2008 (aus d. Engl.: 
-  \textit{System of National Accounts 2008})}
+  \acro{SNA08}{System der volkswirtschaftlichen Gesamtrechnung 2008 
+  (aus d. Engl.: \textit{System of National Accounts 2008})}
 
 \end{acronym}
 
 \newpage
 
-% Glossar
+%%%%%%%%%%%
+% Glossar %
+% TODO: - %
+%%%%%%%%%%%
+
 \section*{Glossar}
 \begin{description}
 
   \item[Big Data] bezeichnet große, komplexe und schnell wachsende Datenmengen, die mit 
-  herkömmlichen Datenverarbeitungssystemen nur schwer analysierbar sind. Die Analyse 
-  von Big Data erfolgt häufig mit Verfahren des maschinellen Lernens, Data Mining und 
-  verteilten Datenbanksystemen \parencite[vgl.][S. 138–139]{gandomi2014beyond}.
+  herkömmlichen Datenverarbeitungssystemen nur schwer analysierbar sind. Die Analyse von Big Data 
+  erfolgt häufig mit Verfahren des maschinellen Lernens, Data Mining und verteilten 
+  Datenbanksystemen \parencite[vgl.][S. 138–139]{gandomi2014beyond}.
 
   \item[Cloud Computing] beschreibt die Bereitstellung von \ac{IT}, sowie dazugehöriger 
-  Ressourcen  (Speicherplatz, Rechenleistung und Anwendungen) über das Internet („die Cloud“) 
-  anstelle lokaler Server oder Computer \parencite[vgl.][S. 50–52]{armbrust2010aview}. 
-  Dieses Modell ermöglicht den flexiblen Zugriff auf Daten und Anwendungen unabhängig vom 
-  Standort und fördert Skalierbarkeit sowie Kosteneffizienz. Die wichtigsten Servicemodelle 
-  sind \ac{IaaS}, \ac{PaaS} und \ac{SaaS} \parencite[vgl.][S. 50]{armbrust2010aview}.
+  Ressourcen (Speicherplatz, Rechenleistung und Anwendungen) über das Internet („die Cloud“) 
+  anstelle lokaler Server oder Computer \parencite[vgl.][S. 50–52]{armbrust2010aview}. Dieses 
+  Modell ermöglicht den flexiblen Zugriff auf Daten und Anwendungen unabhängig vom Standort und 
+  fördert Skalierbarkeit sowie Kosteneffizienz. Die wichtigsten Servicemodelle sind \ac{IaaS}, 
+  \ac{PaaS} und \ac{SaaS} \parencite[vgl.][S. 50]{armbrust2010aview}.
 
   \item[Digitalisierung] bezeichnet den Prozess der Umwandlung von analogen Informationen, 
   Prozessen und Geschäftsmodellen in digitale Formate. Sie umfasst den Einsatz digitaler 
   Technologien zur Automatisierung und Optimierung von Abläufen sowie zur Schaffung neuer 
   Wertschöpfungspotenziale \parencite[vgl.][S. 6]{brennen2016theinternational}. Im 
-  wirtschaftlichen Kontext wird Digitalisierung oft im Zusammenhang mit der vierten 
-  industriellen Revolution (Industrie 4.0) gesehen, die durch die Integration digitaler 
-  und physischer Systeme gekennzeichnet ist \parencite[vgl.][S. 114]{hofman2018arbeit}.
+  wirtschaftlichen Kontext wird Digitalisierung oft im Zusammenhang mit der vierten industriellen 
+  Revolution (Industrie 4.0) gesehen, die durch die Integration digitaler und physischer Systeme 
+  gekennzeichnet ist \parencite[vgl.][S. 113–115]{hofman2018arbeit}.
 
-  \item[Künstliche Intelligenz] bezeichnet die Fähigkeit von Maschinen oder 
-  Computersystemen, menschenähnliche kognitive Funktionen wie Lernen, Problemlösung und 
-  Entscheidungsfindung auszuführen. Sie basiert auf Algorithmen, die Muster in Daten 
-  erkennen und selbstständig aus Erfahrungen lernen können 
-  \parencite[vgl.][S. 10–13]{russell2020artificial}. \ac{AI} umfasst verschiedene Teilbereiche 
-  wie maschinelles Lernen, neuronale Netzwerke und natürliche Sprachverarbeitung.
+  \item[Künstliche Intelligenz] bezeichnet die Fähigkeit von Maschinen oder Computersystemen, 
+  menschenähnliche kognitive Funktionen wie Lernen, Problemlösung und Entscheidungsfindung 
+  auszuführen. Sie basiert auf Algorithmen, die Muster in Daten erkennen und selbstständig aus 
+  Erfahrungen lernen können \parencite[vgl.][S. 10–13]{russell2020artificial}. \ac{AI} umfasst 
+  verschiedene Teilbereiche wie maschinelles Lernen, neuronale Netzwerke und natürliche 
+  Sprachverarbeitung.
 
-  \item[Reversed Causality] beschreibt eine umgekehrte Kausalbeziehung zwischen zwei 
-  Variablen, bei der die vermeintliche unabhängige Variable tatsächlich durch die 
-  abhängige Variable beeinflusst wird \parencite[vgl.][S. 29-33]{pearl2009causality}. Dies 
-  kann zu Fehlinterpretationen in statistischen Analysen führen, insbesondere in 
-  nicht-experimentellen Studien. Reversed Causality tritt häufig in wirtschaftlichen und 
-  sozialwissenschaftlichen Untersuchungen auf.
+  \item[Reversed Causality] beschreibt eine umgekehrte Kausalbeziehung zwischen zwei Variablen, 
+  bei der die vermeintliche unabhängige Variable tatsächlich durch die abhängige Variable 
+  beeinflusst wird \parencite[vgl.][S. 29–33]{pearl2009causality}. Dies kann zu 
+  Fehlinterpretationen in statistischen Analysen führen, insbesondere in nicht-experimentellen 
+  Studien. Reversed Causality tritt häufig in wirtschaftlichen und sozialwissenschaftlichen 
+  Untersuchungen auf.
 
 \end{description}
 

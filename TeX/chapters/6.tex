@@ -36,9 +36,9 @@ Maximum von 8,69\%. Der Mittelwert beträgt 2,46\%, während der Median mit 2,25
 liegt. Dies deutet auf eine leicht rechtsschiefe Verteilung hin, da einige Länder besonders hohe 
 Investitionen in \ac{ICT} tätigen. Die Standardabweichung von 0,98 zeigt, dass es zwischen den 
 \ac{OECD}-Ländern erhebliche Unterschiede in der Intensität der \textit{\ac{ICT}-Investitionen} 
-gibt. Während einige Länder konstant hohe Anteile ihrer wirtschaftlichen Ressourcen in digitale 
-Technologien investieren, gibt es andere, die vergleichsweise geringe Investitionen tätigen. 
-Diese Unterschiede können durch verschiedene Faktoren beeinflusst sein, darunter wirtschaftliche 
+gibt. Während einige Länder konstant hohe Anteile ihrer wirtschaftlichen Ressourcen in \ac{ICT} 
+investieren, gibt es andere, die vergleichsweise geringe Investitionen tätigen. Diese 
+Unterschiede können durch verschiedene Faktoren beeinflusst sein, darunter wirtschaftliche 
 Leistungsfähigkeit, politische Strategien zur Förderung der Digitalisierung sowie strukturelle 
 Unterschiede in der Entwicklung des \ac{ICT}-Sektors. 
 
@@ -113,8 +113,9 @@ Ländern ermöglichen. Sie bietet einen ersten Einblick auf Länderebene in die 
 \textit{\ac{ICT}-Investitionen} (gemessen als Anteil am \textit{\ac{BIP} pro Kopf}) und den 
 \textit{Arbeitslosenquote}, differenziert nach den drei genannten Bildungsgruppen. Hierbei wird 
 jeweils ein repräsentatives Land pro \textit{Wohlfahrtsstaatentyp} für die Analyse gewählt - 
-Spanien als südeuropäischer, Polen als postsozialistischer, Schweden als nordischer und 
-Deutschland als mitteleuropäischer Wohlfahrtsstaat im Zeitraum von 2005 bis 2022. 
+Spanien als südeuropäischer, Polen als postsozialistischer, Schweden als nordischer, 
+Großbritannien als angelsächsischer und Deutschland als mitteleuropäischer Wohlfahrtsstaat im 
+Zeitraum von 2005 bis 2022. 
 
 Um die Lesbarkeit der Grafiken zu verbessern, wurden die Ländernamen in den Diagrammen 
 automatisch in die deutsche Sprache übersetzt. Dies stellt sicher, dass die visuelle Darstellung 
@@ -122,7 +123,7 @@ konsistent mit der Textanalyse bleibt. Ziel ist es, vor der multivariaten Analys
 Unterschiede und Trends innerhalb der Länder und zwischen den Bildungsgruppen zu identifizieren.
 
 % Grafik "Spanien"
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \caption{Überblick über \textit{\ac{ICT}-Investitionen} und \textit{Arbeitslosenquote} in 
     Spanien}
@@ -192,7 +193,7 @@ steigenden \textit{\ac{ICT}-Investitionen} profitieren konnten, während gering 
 von konjunkturellen Faktoren abhängig waren.
 
 % Grafik "Polen"
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \caption{Überblick über \textit{\ac{ICT}-Investitionen} und \textit{Arbeitslosenquote} in 
     Polen}
@@ -265,7 +266,7 @@ polnische Arbeitsmarkt allmählich in Richtung einer wissensbasierten Wirtschaft
 der besonders Hochqualifizierte profitieren.
 
 % Grafik "Schweden"
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \caption{Überblick über \textit{\ac{ICT}-Investitionen} und \textit{Arbeitslosenquote} in 
     Schweden} 
@@ -334,8 +335,11 @@ Volkswirtschaften wie Schweden zunehmend zu einer Polarisierung des Arbeitsmarkt
 Hochqualifizierte von den Investitionen profitieren, während gering Qualifizierte zunehmend unter 
 Druck geraten.
 
+% neue Seite für Optik
+\newpage
+
 % Grafik "Deutschland"
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \caption{Überblick über \textit{\ac{ICT}-Investitionen} und \textit{Arbeitslosenquote} in 
     Deutschland}
@@ -398,7 +402,7 @@ mit makroökonomischen Entwicklungen und strukturellen Veränderungen auf dem de
 Arbeitsmarkt zusammenhängt.
 
 % Grafik "Großbritannien"
-\begin{figure}[htbp]
+\begin{figure}[H]
     \centering
     \caption{Überblick über \textit{\ac{ICT}-Investitionen} und Arbeitslosenquote in 
     Großbritannien}
@@ -467,10 +471,10 @@ Beschäftigungsdynamik spielen als allein die Höhe der \textit{\ac{ICT}-Investi
 
 Die Zusammenfassung der Ergebnisse aus den Modellen mit Kontrollvariablen zeigt eine umfassende, 
 jedoch differenzierte Analyse der Auswirkungen von \textit{\ac{ICT}-Investitionen} auf die 
-\textit{Arbeitslosenquote} in den drei Bildungsgruppen („niedriges Bildungsniveau“, „mittleres 
-Bildungsniveau“, „hohes Bildungsniveau“). Die Modelle liefern wichtige Hinweise auf die Bedeutung 
-makroökonomischer Rahmenbedingungenund institutioneller Strukturen, während der direkte Einfluss 
-von\textit{\ac{ICT}-Investitionen} signifikant, aber unterschiedlich stark ausfällt.
+\textit{Arbeitslosenquote} in den drei Bildungsgruppen. Die Modelle liefern wichtige Hinweise auf 
+die Bedeutung makroökonomischer Rahmenbedingungenund institutioneller Strukturen, während der 
+direkte Einfluss von\textit{\ac{ICT}-Investitionen} signifikant, aber unterschiedlich stark 
+ausfällt.
 
 % Modelle ohne Interaktion
 \input{assets/models_control_final.tex}
@@ -609,11 +613,12 @@ Zusammenhänge, insbesondere mit institutionellen Faktoren wie den \textit{Wohlf
 % Modell mit Interaktion (Referenzkategorie)
 Zunächst ist jedoch der Haupteffekt von \textit{\ac{ICT}-Investitionen} zu betrachten, der für 
 die Referenzkategorie, die angelsächsischen Wohlfahrtsstaaten, gilt. Die Ergebnisse zeigen, dass 
-höhere \textit{\ac{ICT}-Investitionen} in liberalen Staaten in allen Bildungsgruppen mit einer 
-steigenden \textit{Arbeitslosenquote} assoziiert sind. Der geschätzte Effekt beträgt 4,671*** 
-(p < 0,001) für das niedrige, 3,246*** (p < 0,001) für mittlere und 1,259*** (p < 0,001) für hohe 
-Bildungsniveau. Diese Werte deuten darauf hin, dass der Zusammenhang zwischen Digitalisierung und 
-Arbeitslosigkeit in angelsächsischen Arbeitsmärkten besonders stark ausgeprägt ist. 
+höhere \textit{\ac{ICT}-Investitionen} in angelsächsischen Staaten in allen Bildungsgruppen mit 
+einer steigenden \textit{Arbeitslosenquote} assoziiert sind. Der geschätzte Effekt beträgt 
+4,671*** (p < 0,001) für das niedrige, 3,246*** (p < 0,001) für mittlere und 1,259*** (p < 0,001) 
+für hohe Bildungsniveau. Diese Werte deuten darauf hin, dass der Zusammenhang zwischen 
+Digitalisierung und Arbeitslosigkeit in angelsächsischen Arbeitsmärkten besonders stark 
+ausgeprägt ist. 
 
 Eine mögliche Erklärung hierfür ist die schwache arbeitsmarktpolitische Regulierung in 
 angelsächsischen Staaten. Diese Märkte sind durch eine hohe Flexibilität, geringe staatliche 
@@ -628,8 +633,8 @@ mittelqualifizierte Arbeitnehmer.
 
 Die Interaktionseffekte zwischen \textit{\ac{ICT}-Investitionen} und den 
 \textit{Wohlfahrtsstaatentypen} liefern nun wichtige Erkenntnisse darüber, wie institutionelle 
-Rahmenbedingungen diesen Zusammenhang beeinflussen. Da die liberalen Wohlfahrtsstaaten als 
-Referenzkategorie dienen, sind die Interaktionseffekte relativ zu diesen Staaten zu 
+Rahmenbedingungen diesen Zusammenhang beeinflussen. Da die angelsächsischen Wohlfahrtsstaaten 
+als Referenzkategorie dienen, sind die Interaktionseffekte relativ zu diesen Staaten zu 
 interpretieren.
 
 % Modell mit Interaktion (Interaktionen)
@@ -638,8 +643,8 @@ Für das niedrige Bildungsniveau beträgt der Interaktionseffekt -5,200*** (p < 
 mittlere Bildungsniveau -3,579*** (p < 0,001) und für das hohe Bildungsniveau -1,415*** 
 (p < 0,001). Diese signifikant negativen Werte bedeuten, dass die negativen Auswirkungen von 
 \ac{ICT}-Investitionen auf die \textit{Arbeitslosenquote} in diesen Ländern geringer ausfallen 
-als in den liberalen Wohlfahrtsstaaten. Da die Interaktionseffekte in ihrer absoluten Höhe sogar 
-größer sind als die Haupteffekte der \ac{ICT}-Investitionen, deutet dies darauf hin, dass 
+als in den angelsächsischen Wohlfahrtsstaaten. Da die Interaktionseffekte in ihrer absoluten Höhe 
+sogar größer sind als die Haupteffekte der \ac{ICT}-Investitionen, deutet dies darauf hin, dass 
 \ac{ICT}-Investitionen in postsozialistischen Staaten nicht zu einer höheren Arbeitslosigkeit 
 führen, sondern möglicherweise stabilisierend wirken. Eine mögliche Erklärung hierfür ist, dass 
 diese Länder gezielte wirtschaftspolitische Maßnahmen implementiert haben oder strukturelle 
@@ -649,16 +654,17 @@ Für mitteleuropäische Wohlfahrtsstaaten sind die Interaktionseffekte negativ, 
 signifikant. Dies bedeutet, dass sich diese Länder nicht signifikant von der Referenzkategorie 
 unterscheiden. Mit anderen Worten gibt es keine eindeutigen Belege dafür, dass 
 \ac{ICT}-Investitionen in diesen Ländern systematisch andere Auswirkungen auf die 
-Arbeitslosigkeit haben als in den liberalen Wohlfahrtsstaaten. Mitteleuropäische Länder wie 
-Deutschland oder Frankreich verfügen über relativ stabile Arbeitsmarktstrukturen und ein starkes 
-duales Bildungssystem, das möglicherweise negative Effekte abfedert. Allerdings zeigen die 
-Ergebnisse keine signifikanten Vorteile dieser Struktur im Vergleich zu liberalen Arbeitsmärkten.
+Arbeitslosigkeit haben als in den angelsächsischen Wohlfahrtsstaaten. Mitteleuropäische Länder 
+wie Deutschland oder Frankreich verfügen über relativ stabile Arbeitsmarktstrukturen und ein 
+starkes duales Bildungssystem, das möglicherweise negative Effekte abfedert. Allerdings zeigen 
+die Ergebnisse keine signifikanten Vorteile dieser Struktur im Vergleich zu angelsächsischen 
+Arbeitsmärkten.
 
 Für nordische Wohlfahrtsstaaten sind die Interaktionseffekte für das niedrige und mittlere 
 Bildungsniveau nicht signifikant, während für das hohe Bildungsniveau ein positiver Effekt von 
 0,639* (p < 0,05) beobachtet wird. Dies bedeutet, dass in nordischen Ländern Hochqualifizierte 
-im Vergleich zu liberalen Wohlfahrtsstaaten tendenziell stärker von steigender Arbeitslosigkeit 
-betroffen sind. Eine mögliche Erklärung könnte sein, dass nordische Staaten stark in 
+im Vergleich zu angelsächsischen Wohlfahrtsstaaten tendenziell stärker von steigender 
+Arbeitslosigkeit betroffen sind. Eine mögliche Erklärung könnte sein, dass nordische Staaten stark in 
 Digitalisierung investieren und dadurch Arbeitsplätze in wissensintensiven Bereichen 
 umstrukturieren. Dies könnte hochqualifizierte Arbeitskräfte vor neue Herausforderungen stellen, 
 insbesondere wenn technologische Entwicklungen schneller voranschreiten als Bildungs- und 
@@ -668,7 +674,7 @@ Für südeuropäische Wohlfahrtsstaaten zeigen sich signifikant negative Interak
 mittlere und hohe Bildungsniveau. Der Effekt für das mittlere Bildungsniveau beträgt -3,066*** 
 (p < 0,001), für das hohe Bildungsniveau -2,880*** (p < 0,001). Dies deutet darauf hin, dass 
 \ac{ICT}-Investitionen in diesen Ländern mit einer geringeren Arbeitslosenquote für Mittel- und 
-Hochqualifizierte im Vergleich zu liberalen Wohlfahrtsstaaten verbunden sind. Dies könnte 
+Hochqualifizierte im Vergleich zu angelsächsischen Wohlfahrtsstaaten verbunden sind. Dies könnte 
 bedeuten, dass technologische Investitionen gezielt in qualifizierte Arbeitsplätze fließen oder 
 dass strukturelle Gegebenheiten, wie Arbeitsplatzsicherheit durch Regulierungen, digitale 
 Umbrüche abfedern. Gleichzeitig könnte diese geringe Dynamik jedoch auch bedeuten, dass 
@@ -708,13 +714,13 @@ zurückzuführen ist.
 Insgesamt zeigen die Interaktionsmodelle, dass die Auswirkungen von \ac{ICT}-Investitionen stark 
 vom Wohlfahrtsstaatentyp abhängen. In postsozialistischen Ländern scheinen Investitionen nicht 
 mit einer steigenden Arbeitslosigkeit verbunden zu sein, während sich in mitteleuropäischen 
-Staaten keine signifikanten Unterschiede zu liberalen Wohlfahrtsstaaten zeigen. In nordischen 
-Ländern scheint es eine leicht negative Wirkung auf hochqualifizierte Arbeitskräfte zu geben, 
-während in südeuropäischen Ländern \ac{ICT}-Investitionen mit einer geringeren Arbeitslosigkeit 
-für Mittel- und Hochqualifizierte verbunden sind. Die insgesamt verbesserten R²-Werte zeigen, 
-dass institutionelle Faktoren eine wichtige Rolle in der Erklärung der Beschäftigungseffekte der 
-Digitalisierung spielen, dennoch bleibt ein relevanter Teil der Varianz unerklärt. Dies 
-verdeutlicht, dass Digitalisierung und technologische Transformation nicht in allen Ländern 
-dieselben Beschäftigungseffekte haben und dass wirtschaftspolitische sowie institutionelle 
-Rahmenbedingungen maßgeblich beeinflussen, wie Arbeitsmärkte auf technologische Investitionen 
-reagieren.
+Staaten keine signifikanten Unterschiede zu angelsächsischen Wohlfahrtsstaaten zeigen. In 
+nordischen Ländern scheint es eine leicht negative Wirkung auf hochqualifizierte Arbeitskräfte zu 
+geben, während in südeuropäischen Ländern \ac{ICT}-Investitionen mit einer geringeren 
+Arbeitslosigkeit für Mittel- und Hochqualifizierte verbunden sind. Die insgesamt verbesserten 
+R²-Werte zeigen, dass institutionelle Faktoren eine wichtige Rolle in der Erklärung der 
+Beschäftigungseffekte der Digitalisierung spielen, dennoch bleibt ein relevanter Teil der Varianz 
+unerklärt. Dies verdeutlicht, dass Digitalisierung und technologische Transformation nicht in 
+allen Ländern dieselben Beschäftigungseffekte haben und dass wirtschaftspolitische sowie 
+institutionelle Rahmenbedingungen maßgeblich beeinflussen, wie Arbeitsmärkte auf technologische 
+Investitionen reagieren.
